@@ -346,6 +346,19 @@ img { display: block; max-width: 100%; }
 .project-wildaina { grid-template-columns:.85fr 1.15fr; }
 .project-wildaina .project-copy { order:1; }
 .project-wildaina .project-visual { order:2; }
+
+.more-work-block { margin-top:64px; }
+.more-work-head { display:grid; grid-template-columns:220px 1fr; gap:40px; align-items:end; margin-bottom:24px; }
+.more-work-head .section-label { margin:0; }
+.more-work-head h3 { margin:0; max-width:760px; font-size:clamp(30px,3.5vw,48px); line-height:1.05; letter-spacing:-.04em; }
+.more-work-grid { display:grid; grid-template-columns:repeat(2,1fr); border-top:1px solid #d6d0c4; border-left:1px solid #d6d0c4; }
+.mini-project { min-height:132px; padding:24px; display:grid; grid-template-columns:48px 1fr auto; gap:18px; align-items:center; border-right:1px solid #d6d0c4; border-bottom:1px solid #d6d0c4; background:rgba(255,255,255,.38); transition:background .2s ease, transform .2s ease; }
+.mini-project:hover { background:#fff; transform:translateY(-2px); }
+.mini-project-no { color:#9b7622; font-size:10px; font-weight:800; letter-spacing:.12em; }
+.mini-project div { display:grid; gap:6px; }
+.mini-project strong { font-size:18px; letter-spacing:-.02em; }
+.mini-project div span { color:var(--muted); font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; }
+.mini-project b { width:38px; height:38px; display:grid; place-items:center; border:1px solid #d6d0c4; border-radius:50%; font-size:14px; }
 .editorial-visual { display:grid; place-items:center; background:linear-gradient(145deg,#d9d9d9,#f7f7f7 42%,#b9babd); padding:54px; }
 .editorial-sheet { width:min(430px,90%); min-height:440px; padding:42px; background:#f8f5ef; box-shadow:0 25px 60px rgba(0,0,0,.18); transform:rotate(2deg); }
 .editorial-overline { font-size:9px; font-weight:800; letter-spacing:.2em; color:#85651b; }
@@ -429,6 +442,7 @@ img { display: block; max-width: 100%; }
   .project-wildaina { grid-template-columns:1fr; }
   .project-wildaina .project-copy { order:2; }
   .project-wildaina .project-visual { order:1; }
+  .more-work-head { grid-template-columns:1fr; gap:12px; }
   .quote-band-inner { grid-template-columns:1fr; gap:20px; }
   .quote-band .button { justify-self:start; }
 }
@@ -502,6 +516,10 @@ img { display: block; max-width: 100%; }
   .editorial-visual { padding:34px 20px; }
   .editorial-sheet { padding:30px; min-height:360px; }
   .editorial-title { font-size:42px; }
+  .more-work-block { margin-top:48px; }
+  .more-work-grid { grid-template-columns:1fr; }
+  .mini-project { min-height:112px; padding:20px 18px; grid-template-columns:36px 1fr auto; }
+  .mini-project strong { font-size:16px; }
   .quote-band { padding:75px 0; }
   .quote-band h2 { font-size:42px; }
   .contact { padding:88px 0; }
@@ -773,6 +791,46 @@ img { display: block; max-width: 100%; }
             </div>
           </div>
         </article>
+
+        <div class="more-work-block reveal">
+          <div class="more-work-head">
+            <span class="section-label" data-i18n="work.moreLabel">More live projects</span>
+            <h3 data-i18n="work.moreTitle">More websites already out in the world.</h3>
+          </div>
+
+          <div class="more-work-grid">
+            <a class="mini-project" href="https://becomingedu.com" target="_blank" rel="noopener">
+              <span class="mini-project-no">01</span>
+              <div><strong>Becoming EDU</strong><span data-i18n="work.becoming.type">Education · Website</span></div>
+              <b>↗</b>
+            </a>
+            <a class="mini-project" href="https://bellecreolekwizin.ca" target="_blank" rel="noopener">
+              <span class="mini-project-no">02</span>
+              <div><strong>Belle Créole Kwizin</strong><span data-i18n="work.belle.type">Food · Website</span></div>
+              <b>↗</b>
+            </a>
+            <a class="mini-project" href="https://akhlawear.com" target="_blank" rel="noopener">
+              <span class="mini-project-no">03</span>
+              <div><strong>Akhla Wear</strong><span data-i18n="work.akhla.type">Fashion · Commerce</span></div>
+              <b>↗</b>
+            </a>
+            <a class="mini-project" href="https://usoutt.com" target="_blank" rel="noopener">
+              <span class="mini-project-no">04</span>
+              <div><strong>USOUTT</strong><span data-i18n="work.usoutt.type">Digital · Website</span></div>
+              <b>↗</b>
+            </a>
+            <a class="mini-project" href="https://gregpromoht.com" target="_blank" rel="noopener">
+              <span class="mini-project-no">05</span>
+              <div><strong>Greg Promo HT</strong><span data-i18n="work.greg.type">Entertainment · Website</span></div>
+              <b>↗</b>
+            </a>
+            <a class="mini-project" href="https://ederito.com" target="_blank" rel="noopener">
+              <span class="mini-project-no">06</span>
+              <div><strong>EDERITO</strong><span data-i18n="work.ederito.type">Studio · Website</span></div>
+              <b>↗</b>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -867,7 +925,7 @@ const copy = {
     "services.apps.title":"Mobile Apps","services.apps.body":"iOS and Android product design and development—from concept and interface to launch-ready digital experiences.",
     "services.marketing.title":"Marketing","services.marketing.body":"Content strategy, campaign direction, social media assets, digital positioning, and creative support that keeps your brand visible.",
     "process.label":"Our approach","process.title":"Clear process.<br><em>Sharp execution.</em>","process.discover.title":"Discover","process.discover.body":"We define the goal, audience, deliverables, timeline, and the right creative direction.","process.create.title":"Create","process.create.body":"Production, design, development, editing, and refinement happen around one clear brief.","process.launch.title":"Launch","process.launch.body":"We prepare the final assets or product for release and make sure the experience is ready for its audience.",
-    "work.label":"Selected work","work.title":"Digital projects made to be used, not just viewed.","work.note":"A small selection of web and app work. Additional projects can be shared during a consultation.","work.koneksyon.type":"Website + Mobile App","work.koneksyon.body":"A Caribbean-inspired social connection platform with a responsive marketing website and mobile experience for iOS and Android.","work.wildaina.type":"Website","work.wildaina.body":"A clean personal web presence designed to present a person, message, and work with clarity across desktop and mobile.","work.visit":"Visit website ↗",
+    "work.label":"Selected work","work.title":"Digital projects made to be used, not just viewed.","work.note":"A small selection of web and app work. Additional projects can be shared during a consultation.","work.koneksyon.type":"Website + Mobile App","work.koneksyon.body":"A Caribbean-inspired social connection platform with a responsive marketing website and mobile experience for iOS and Android.","work.wildaina.type":"Website","work.wildaina.body":"A clean personal web presence designed to present a person, message, and work with clarity across desktop and mobile.","work.visit":"Visit website ↗","work.moreLabel":"More live projects","work.moreTitle":"More websites already out in the world.","work.becoming.type":"Education · Website","work.belle.type":"Food · Website","work.akhla.type":"Fashion · Commerce","work.usoutt.type":"Digital · Website","work.greg.type":"Entertainment · Website","work.ederito.type":"Studio · Website",
     "quote.eyebrow":"FROM IDEA TO IMPACT","quote.title":"Need the camera, the website,<br>the app—or <em>all of it?</em>","quote.cta":"Tell us what you’re building",
     "contact.label":"Contact","contact.title":"Let’s make something<br><em>worth seeing.</em>","contact.body":"Pricing depends on the scope, timeline, production needs, and deliverables. Tell us what you need and we’ll start with a custom quote.","contact.locationLabel":"Based in","contact.location":"Orlando, Florida","contact.languagesLabel":"Languages",
     "form.name":"Your name","form.email":"Email","form.service":"What do you need?","form.choose":"Choose a service","form.video":"Videography","form.photo":"Photography","form.journalism":"Journalism & Media","form.website":"Website","form.app":"Mobile App","form.marketing":"Marketing","form.multiple":"Multiple services","form.details":"Tell us about the project","form.submit":"Prepare email request","form.note":"Submitting opens your email app with your project details addressed to Zoom-X Productions.",
@@ -891,7 +949,7 @@ const copy = {
     "services.apps.title":"Applications mobiles","services.apps.body":"Conception et développement iOS et Android, de l’idée et de l’interface jusqu’à une expérience prête au lancement.",
     "services.marketing.title":"Marketing","services.marketing.body":"Stratégie de contenu, direction de campagne, visuels sociaux, positionnement digital et soutien créatif pour renforcer votre visibilité.",
     "process.label":"Notre approche","process.title":"Un processus clair.<br><em>Une exécution précise.</em>","process.discover.title":"Comprendre","process.discover.body":"Nous définissons l’objectif, le public, les livrables, le calendrier et la bonne direction créative.","process.create.title":"Créer","process.create.body":"Production, design, développement, montage et ajustements s’organisent autour d’un brief clair.","process.launch.title":"Lancer","process.launch.body":"Nous préparons les livrables ou le produit pour sa mise en ligne et vérifions que l’expérience est prête pour son public.",
-    "work.label":"Réalisations sélectionnées","work.title":"Des projets digitaux conçus pour être utilisés, pas seulement regardés.","work.note":"Une sélection de projets web et mobile. D’autres réalisations peuvent être présentées lors d’une consultation.","work.koneksyon.type":"Site web + Application mobile","work.koneksyon.body":"Une plateforme sociale inspirée de la Caraïbe, avec un site marketing responsive et une expérience mobile pour iOS et Android.","work.wildaina.type":"Site web","work.wildaina.body":"Une présence web personnelle claire, conçue pour présenter une personne, son message et son travail sur ordinateur comme sur mobile.","work.visit":"Visiter le site ↗",
+    "work.label":"Réalisations sélectionnées","work.title":"Des projets digitaux conçus pour être utilisés, pas seulement regardés.","work.note":"Une sélection de projets web et mobile. D’autres réalisations peuvent être présentées lors d’une consultation.","work.koneksyon.type":"Site web + Application mobile","work.koneksyon.body":"Une plateforme sociale inspirée de la Caraïbe, avec un site marketing responsive et une expérience mobile pour iOS et Android.","work.wildaina.type":"Site web","work.wildaina.body":"Une présence web personnelle claire, conçue pour présenter une personne, son message et son travail sur ordinateur comme sur mobile.","work.visit":"Visiter le site ↗","work.moreLabel":"Autres projets en ligne","work.moreTitle":"D’autres sites déjà disponibles au public.","work.becoming.type":"Éducation · Site web","work.belle.type":"Restauration · Site web","work.akhla.type":"Mode · E-commerce","work.usoutt.type":"Digital · Site web","work.greg.type":"Divertissement · Site web","work.ederito.type":"Studio · Site web",
     "quote.eyebrow":"DE L’IDÉE À L’IMPACT","quote.title":"Besoin de la caméra, du site,<br>de l’application—ou <em>de tout?</em>","quote.cta":"Parlez-nous de votre projet",
     "contact.label":"Contact","contact.title":"Créons quelque chose<br><em>qui mérite d’être vu.</em>","contact.body":"Le tarif dépend de l’ampleur du projet, du calendrier, des besoins de production et des livrables. Expliquez-nous votre besoin et nous commencerons par un devis personnalisé.","contact.locationLabel":"Basé à","contact.location":"Orlando, Floride","contact.languagesLabel":"Langues",
     "form.name":"Votre nom","form.email":"E-mail","form.service":"De quoi avez-vous besoin?","form.choose":"Choisir un service","form.video":"Vidéographie","form.photo":"Photographie","form.journalism":"Journalisme & Média","form.website":"Site web","form.app":"Application mobile","form.marketing":"Marketing","form.multiple":"Plusieurs services","form.details":"Parlez-nous du projet","form.submit":"Préparer la demande par e-mail","form.note":"Le bouton ouvrira votre application e-mail avec les détails du projet adressés à Zoom-X Productions.",
@@ -915,7 +973,7 @@ const copy = {
     "services.apps.title":"Aplicaciones móviles","services.apps.body":"Diseño y desarrollo para iOS y Android, desde el concepto y la interfaz hasta una experiencia lista para lanzar.",
     "services.marketing.title":"Marketing","services.marketing.body":"Estrategia de contenido, dirección de campañas, piezas para redes sociales, posicionamiento digital y apoyo creativo para mantener visible tu marca.",
     "process.label":"Nuestro proceso","process.title":"Proceso claro.<br><em>Ejecución precisa.</em>","process.discover.title":"Descubrir","process.discover.body":"Definimos el objetivo, la audiencia, los entregables, el calendario y la dirección creativa correcta.","process.create.title":"Crear","process.create.body":"Producción, diseño, desarrollo, edición y ajustes trabajan alrededor de un brief claro.","process.launch.title":"Lanzar","process.launch.body":"Preparamos los activos o el producto para su lanzamiento y verificamos que la experiencia esté lista para su audiencia.",
-    "work.label":"Proyectos seleccionados","work.title":"Proyectos digitales hechos para usarse, no solo para verse.","work.note":"Una pequeña selección de trabajo web y móvil. Podemos mostrar proyectos adicionales durante una consulta.","work.koneksyon.type":"Sitio web + Aplicación móvil","work.koneksyon.body":"Una plataforma social inspirada en el Caribe, con sitio web de marketing responsivo y experiencia móvil para iOS y Android.","work.wildaina.type":"Sitio web","work.wildaina.body":"Una presencia web personal y limpia, diseñada para presentar a una persona, su mensaje y su trabajo con claridad en escritorio y móvil.","work.visit":"Visitar sitio ↗",
+    "work.label":"Proyectos seleccionados","work.title":"Proyectos digitales hechos para usarse, no solo para verse.","work.note":"Una pequeña selección de trabajo web y móvil. Podemos mostrar proyectos adicionales durante una consulta.","work.koneksyon.type":"Sitio web + Aplicación móvil","work.koneksyon.body":"Una plataforma social inspirada en el Caribe, con sitio web de marketing responsivo y experiencia móvil para iOS y Android.","work.wildaina.type":"Sitio web","work.wildaina.body":"Una presencia web personal y limpia, diseñada para presentar a una persona, su mensaje y su trabajo con claridad en escritorio y móvil.","work.visit":"Visitar sitio ↗","work.moreLabel":"Más proyectos en línea","work.moreTitle":"Más sitios web que ya están en el mundo.","work.becoming.type":"Educación · Sitio web","work.belle.type":"Gastronomía · Sitio web","work.akhla.type":"Moda · Comercio","work.usoutt.type":"Digital · Sitio web","work.greg.type":"Entretenimiento · Sitio web","work.ederito.type":"Estudio · Sitio web",
     "quote.eyebrow":"DE LA IDEA AL IMPACTO","quote.title":"¿Necesitas la cámara, el sitio,<br>la app—o <em>todo?</em>","quote.cta":"Cuéntanos qué estás creando",
     "contact.label":"Contacto","contact.title":"Hagamos algo<br><em>que valga la pena ver.</em>","contact.body":"El precio depende del alcance, el calendario, las necesidades de producción y los entregables. Cuéntanos lo que necesitas y empezaremos con una cotización personalizada.","contact.locationLabel":"Ubicación","contact.location":"Orlando, Florida","contact.languagesLabel":"Idiomas",
     "form.name":"Tu nombre","form.email":"Correo electrónico","form.service":"¿Qué necesitas?","form.choose":"Elige un servicio","form.video":"Videografía","form.photo":"Fotografía","form.journalism":"Periodismo y Medios","form.website":"Sitio web","form.app":"Aplicación móvil","form.marketing":"Marketing","form.multiple":"Varios servicios","form.details":"Cuéntanos sobre el proyecto","form.submit":"Preparar solicitud por correo","form.note":"El botón abrirá tu aplicación de correo con los detalles del proyecto dirigidos a Zoom-X Productions.",
@@ -940,61 +998,3 @@ function setLanguage(lang) {
   document.documentElement.lang = lang;
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.dataset.i18n;
-    if (copy[lang][key]) el.textContent = copy[lang][key];
-  });
-  document.querySelectorAll("[data-i18n-html]").forEach((el) => {
-    const key = el.dataset.i18nHtml;
-    if (copy[lang][key]) el.innerHTML = copy[lang][key];
-  });
-  document.querySelectorAll("[data-lang]").forEach((button) => {
-    button.classList.toggle("is-active", button.dataset.lang === lang);
-    button.setAttribute("aria-pressed", button.dataset.lang === lang ? "true" : "false");
-  });
-
-  const titles = {
-    en: "Zoom-X Productions | Media & Digital Studio",
-    fr: "Zoom-X Productions | Studio média et digital",
-    es: "Zoom-X Productions | Estudio de medios y digital"
-  };
-  document.title = titles[lang];
-}
-
-document.querySelectorAll("[data-lang]").forEach((button) => {
-  button.addEventListener("click", () => setLanguage(button.dataset.lang));
-});
-
-const header = document.querySelector(".site-header");
-const menuButton = document.querySelector(".menu-button");
-const navMenu = document.querySelector(".nav-menu");
-
-function syncHeader() {
-  header.classList.toggle("scrolled", window.scrollY > 18);
-}
-window.addEventListener("scroll", syncHeader, { passive: true });
-syncHeader();
-
-menuButton.addEventListener("click", () => {
-  const open = menuButton.getAttribute("aria-expanded") === "true";
-  menuButton.setAttribute("aria-expanded", String(!open));
-  navMenu.classList.toggle("open", !open);
-  document.body.classList.toggle("menu-open", !open);
-});
-
-document.querySelectorAll(".nav-menu a").forEach((link) => {
-  link.addEventListener("click", () => {
-    menuButton.setAttribute("aria-expanded", "false");
-    navMenu.classList.remove("open");
-    document.body.classList.remove("menu-open");
-  });
-});
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("in-view");
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.12 });
-
-document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
