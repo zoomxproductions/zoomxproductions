@@ -35,3 +35,8 @@
 }
 @media(max-width:375px){.page-hero h1{font-size:43px}.hero h1{font-size:20vw}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+
+/* Preserve project identity when off-site app screenshots are unavailable. */
+.work-visual::before,.case-media::before{content:"KONEKSYON";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:clamp(44px,10vw,165px);font-weight:600;letter-spacing:-.07em;color:#fff;opacity:.11;white-space:nowrap;pointer-events:none}
+.phones,.case-media img{position:relative;z-index:1}
+.case-media{position:relative}
