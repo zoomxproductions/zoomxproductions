@@ -24,3 +24,7 @@ The contact form is a `mailto:` launcher, not a server submission. For reliable 
 
 ## Deploy
 Deploy the root `.html` files plus the full `assets/` directory to any static host. Update your host's domain/DNS settings separately. The website is not yet published to the custom domain by this repository change.
+
+## Real photography (October 2026 update)
+
+Ten optimized photos from the supplied assets are stored in assets/gallery/. Photos are featured on Home, Work, About, Video + Photography, Journalism + Media, and the dedicated gallery.html. All photo captions are localized into EN, FR, and ES. The photos do not imply endorsements or partnerships with people pictured.
