@@ -15,15 +15,24 @@ Premium trilingual marketing website for Zoom-X Productions.
 - Mobile App Development
 - Marketing & Digital Strategy
 
-## Portfolio
-- Koneksyon website + iOS + Android links
-- Wildaina Charles website
+## Portfolio references
+- Koneksyon — website + iOS + Android
+- Wildaina Charles
+- Becoming EDU
+- Belle Créole Kwizin
+- Akhla Wear
+- USOUTT
+- Greg Promo HT
+- EDERITO
 
 ## Pricing
 Pricing is intentionally not published. Visitors are directed to request a custom quote at info@zoomxproductions.com.
+
+## Contact
+info@zoomxproductions.com
 
 ## Run locally
 Open index.html directly or serve the repository with any static web server.
 
 ## Deploy
-This is a static website and can be deployed on GitHub Pages, Netlify, Vercel, Cloudflare Pages, or any standard web host.
+The main site is self-contained in index.html, so it can be deployed on GitHub Pages, Netlify, Vercel, Cloudflare Pages, or any standard web host.
