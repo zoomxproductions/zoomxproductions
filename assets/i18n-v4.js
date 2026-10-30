@@ -374,3 +374,20 @@ window.ZOOMX_I18N.es = Object.assign(window.ZOOMX_I18N.es, {
   "pricing.app.startDesc": "Aplicaciones web o móviles. Las plataformas, pantallas, funciones, cuentas, integraciones, pruebas y apoyo al lanzamiento se definen en la propuesta.",
   "pricing.app.note": "La cotización final depende de los requisitos aprobados. Los costos de tiendas de apps, servicios externos e infraestructura recurrente son adicionales salvo que se incluyan expresamente."
 });
+
+/* Zoom-X portfolio addition: Olleni commerce project */
+window.ZOOMX_I18N.en = Object.assign(window.ZOOMX_I18N.en,{
+  "v4.project.olleni": "Hair & beauty e-commerce store",
+  "v4.workpage.title": "Work & media.",
+  "v4.workpage.intro": "Explore live websites, online stores and applications, along with photographs from our production and reporting work."
+});
+window.ZOOMX_I18N.fr = Object.assign(window.ZOOMX_I18N.fr,{
+  "v4.project.olleni": "Boutique en ligne de soins capillaires et beauté",
+  "v4.workpage.title": "Projets et médias.",
+  "v4.workpage.intro": "Découvrez des sites web, boutiques en ligne et applications, ainsi que des photographies de nos productions et reportages."
+});
+window.ZOOMX_I18N.es = Object.assign(window.ZOOMX_I18N.es,{
+  "v4.project.olleni": "Tienda en línea de productos para cabello y belleza",
+  "v4.workpage.title": "Trabajos y medios.",
+  "v4.workpage.intro": "Explora sitios web, tiendas en línea y aplicaciones, además de fotografías de nuestras producciones y reportajes."
+});
