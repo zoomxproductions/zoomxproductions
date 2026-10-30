@@ -1,131 +1,463 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#151514">
-<meta name="description" content="Zoom-X Productions in Orlando — films, photography, event coverage and digital work. Watch selected productions and explore services and pricing.">
-<title>Zoom-X Productions | Film, Photography & Digital</title>
-<link rel="preload" href="assets/video-portfolio/Zoom-and-Ang-poster.webp" as="image" type="image/webp">
-<link rel="stylesheet" href="assets/cinema-home.css?v=20261030-cinema1">
-<script src="assets/cinema-home.js?v=20261030-cinema1" defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f4f1ea">
+  <meta name="description" content="Zoom-X Productions: video production, photography, event coverage, websites and digital services. Explore our films and request a production quote.">
+  <title>Zoom-X Productions | Film, Photography & Digital</title>
+  <link rel="preload" href="assets/video-portfolio/Claire-Compas-BTS-poster.webp" as="image" type="image/webp">
+  <style id="zoomx-studio-design">/* Zoom-X: restrained film-led homepage, v10 */
+:root{--paper:#f5f2ec;--paper2:#eae6df;--ink:#181a18;--dark:#151716;--dark2:#1e211f;--line:#cbc6bb;--gold:#b18b48;--muted:#68645d;--sans:Arial,'Helvetica Neue',Helvetica,sans-serif;--serif:Georgia,'Times New Roman',serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-width:280px;background:var(--paper);color:var(--ink);font:15px/1.55 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}button{font:inherit}img{max-width:100%;display:block}svg{display:block}
+.shell{width:min(1400px,calc(100% - 76px));margin-inline:auto}
+.skip-link{position:absolute;left:-10000px;top:auto;z-index:500;background:white;padding:12px}.skip-link:focus{top:0;left:0}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.site-header{position:relative;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
+.header-inner{height:85px;display:flex;justify-content:space-between;align-items:center;gap:28px}
+.brand{display:flex;align-items:center;flex:none;width:108px;height:77px;overflow:visible}
+.brand img{width:108px;height:auto;max-height:78px;object-fit:contain}
+.main-nav{display:flex;align-items:center;gap:27px;margin-left:auto}
+.main-nav a{font-size:12px;line-height:1.2;font-weight:600;transition:color .15s}
+.main-nav a:hover{color:#947038}
+.header-controls{display:flex;align-items:center;gap:23px}
+.locale-switch{display:flex;align-items:center;gap:7px}
+.locale-switch button{border:none;background:none;color:#787169;padding:8px 1px;font-size:10px;font-weight:700;cursor:pointer}
+.locale-switch button[aria-pressed="true"]{color:var(--ink);border-bottom:1px solid var(--ink)}
+.header-inquiry{border:1px solid var(--ink);font-size:11px;line-height:1;padding:15px 16px;font-weight:700;white-space:nowrap;transition:background .18s,color .18s}
+.header-inquiry:hover{background:var(--ink);color:var(--paper)}
+.menu-button{display:none;background:none;border:none;color:var(--ink);font-size:11px;font-weight:700;cursor:pointer;align-items:center;gap:9px;padding:12px 0}
+.menu-line{width:20px;height:1px;background:currentColor;position:relative}
+.menu-line:after{content:"";width:20px;height:1px;position:absolute;left:0;top:6px;background:currentColor}
+/* Film first: one featured film, no overlaying content panels */
+.hero{background:var(--dark);color:#f4f1eb}
+.hero-grid{display:grid;grid-template-columns:minmax(0,.94fr) minmax(0,1.06fr);align-items:stretch;gap:0}
+.hero-media{position:relative;min-height:650px;height:min(810px,calc(100svh - 85px));background:#2a2b29;overflow:hidden;isolation:isolate}
+.hero-media video{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;object-position:center 50%;filter:contrast(1.03)}
+.media-corner{position:absolute;z-index:2;left:25px;top:24px;display:flex;gap:17px;align-items:center;text-transform:uppercase;letter-spacing:.10em;font-size:10px;font-weight:700;color:#fff;background:rgba(14,16,15,.84);padding:11px 13px}
+.media-corner span+span{color:#c5ad7a}
+.media-caption{position:absolute;z-index:2;bottom:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;gap:15px;padding:18px 24px;background:#171918;color:#f4f1eb}
+.media-caption strong{font:400 22px/1.15 var(--serif)}
+.media-caption span{font-size:11px;letter-spacing:.12em;color:#c3b7a2}
+.film-play{display:grid;place-items:center;width:64px;height:64px;background:rgba(18,19,18,.86);color:#fff;border:1px solid rgba(255,255,255,.8);border-radius:50%;cursor:pointer;transition:background .2s,transform .2s}
+.film-play svg{width:27px;height:27px;margin-left:4px}
+.film-play:hover{background:#a17b41;transform:scale(1.04)}
+.hero-play{position:absolute;z-index:4;top:50%;left:50%;transform:translate(-50%,-50%)}
+.hero-play:hover{transform:translate(-50%,-50%) scale(1.05)}
+.hero-copy{min-width:0;display:flex;flex-direction:column;justify-content:center;padding:60px clamp(45px,6vw,110px);position:relative}
+.eyebrow{font-size:10px;letter-spacing:.14em;font-weight:700;line-height:1.5;text-transform:uppercase;margin:0 0 22px}
+.eyebrow.accent{color:#9a763b}.eyebrow.light{color:#c7a46a}
+.hero h1{font:400 clamp(43px,4.75vw,75px)/1.09 var(--serif);letter-spacing:-.045em;margin:0 0 26px;max-width:630px}
+.hero h1 span{display:block;overflow-wrap:normal}
+.hero-text{font-size:15px;line-height:1.75;color:#c6c4bd;max-width:460px;margin:0}
+.hero-actions{display:flex;gap:24px 26px;align-items:center;flex-wrap:wrap;margin-top:33px}
+.main-action{display:inline-flex;justify-content:center;align-items:center;background:#f5f2ec;color:#171918;min-height:48px;padding:15px 19px;font-size:12px;font-weight:700;transition:background .15s}
+.main-action:hover{background:#d9c59d}
+.secondary-action{display:inline-flex;align-items:center;padding:8px 0;border-bottom:1px solid #b5b3ac;min-height:48px;font-size:12px;font-weight:700}
+.hero-lower{margin-top:76px;padding-top:14px;border-top:1px solid #565953;display:flex;justify-content:space-between;align-items:center;gap:20px;font-size:9px;letter-spacing:.10em;color:#aca9a2}
+.hero-lower a{color:#dedbd3;text-decoration:underline;text-underline-offset:5px}
+.discipline-bar{background:#e5ded3;border-bottom:1px solid #cfc7b9}
+.discipline-inner{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.discipline-inner span{font-size:10px;font-weight:700;letter-spacing:.15em;color:#56534c}
+/* Main selected film */
+.film-section{padding:106px 0 115px;background:var(--paper)}
+.section-intro{max-width:920px;margin-bottom:65px}
+.section-intro h2{font:400 clamp(40px,5.2vw,80px)/1.04 var(--serif);letter-spacing:-.05em;margin:0 0 14px}
+.section-intro p:last-child{color:#635e56;margin:0;font-size:14px;line-height:1.65;max-width:550px}
+.feature-film{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(50px,8vw,138px);align-items:center}
+.feature-film-copy{max-width:520px}
+.project-no{font-size:10px;letter-spacing:.13em;font-weight:700;color:#8b6d3d}
+.feature-film-copy h3{font:400 clamp(39px,4.7vw,74px)/1.03 var(--serif);letter-spacing:-.045em;margin:21px 0 24px}
+.feature-film-copy p{max-width:390px;margin:0 0 29px;font-size:15px;line-height:1.75;color:#605b53}
+.watch-link{display:flex;align-items:center;gap:13px;width:min(100%,330px);text-align:left;background:none;color:#191b19;border:0;border-top:1px solid #b9b2a5;border-bottom:1px solid #b9b2a5;padding:17px 0;font-size:12px;font-weight:700;cursor:pointer}
+.watch-link svg{width:20px;height:20px}
+.watch-link .duration{margin-left:auto;font-size:10px;color:#736c61;font-weight:400}
+.collection-link{display:inline-block;margin-top:28px;padding-bottom:5px;border-bottom:1px solid #151716;font-size:11px;font-weight:700}
+.feature-film-image{position:relative;display:block;padding:0;border:0;background:#141715;cursor:pointer;aspect-ratio:1.2/1;overflow:hidden;width:100%}
+.feature-film-image img{width:100%;height:100%;object-fit:cover;object-position:center 41%;transition:transform .55s}
+.feature-film-image:hover img{transform:scale(1.025)}
+.feature-film-image-label{position:absolute;bottom:22px;left:22px;background:#181a19;color:#fff;padding:13px 18px;font-size:10px;font-weight:700;letter-spacing:.12em}
+/* Production photography: dark with image hierarchy */
+.field-section{background:#202220;color:#f4f1ea;padding:100px 0 107px}
+.field-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.18fr) minmax(0,.8fr);gap:20px;align-items:end}
+.field-intro{align-self:start;padding:12px 42px 0 0}
+.field-intro h2{font:400 clamp(38px,4.4vw,67px)/1.09 var(--serif);letter-spacing:-.043em;margin:0 0 23px}
+.field-intro p:not(.eyebrow){font-size:14px;line-height:1.7;color:#c0bdb6;margin:0 0 35px;max-width:390px}
+.text-on-dark{display:inline-block;font-size:11px;font-weight:700;color:#f4f1ea;border-bottom:1px solid #c9c7be;padding-bottom:6px}
+.field-figure{min-width:0;margin:0}
+.field-figure img{height:auto;display:block;width:100%;object-fit:cover;background:#31322f}
+.field-figure-primary img{aspect-ratio:3/4}
+.field-figure-secondary img{aspect-ratio:3/4}
+.field-figure figcaption{padding-top:13px;color:#bab7af;font-size:10px;letter-spacing:.10em;text-transform:uppercase}
+/* Services and digital projects */
+.services-section{padding:112px 0 120px;background:#f5f2ec}
+.section-intro-split{max-width:none;display:grid;grid-template-columns:1fr minmax(220px,.48fr);gap:80px;align-items:end;margin-bottom:56px}
+.section-intro-split h2{margin-bottom:0}
+.section-intro-split>p{font-size:14px;line-height:1.75;color:#625c52;margin:0 0 5px}
+.services-list{border-top:1px solid #a39e95}
+.service-row{display:grid;grid-template-columns:55px minmax(0,1fr) 155px;align-items:center;gap:30px;border-bottom:1px solid #d0cac0;padding:21px 0;transition:padding-left .18s}
+.service-row:hover{padding-left:10px}
+.service-row span{font:12px/1 var(--sans);color:#927447;letter-spacing:.10em}
+.service-row strong{font:400 clamp(24px,2.6vw,39px)/1.18 var(--serif);letter-spacing:-.028em}
+.service-row em{font-size:13px;font-style:normal;text-align:right;font-weight:700}
+.underlined-link{display:inline-block;margin-top:31px;padding-bottom:5px;border-bottom:1px solid #252622;font-size:12px;font-weight:700}
+.digital-section{padding:108px 0 116px;background:#e7e2d9}
+.digital-rows{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.digital-rows a{display:flex;min-height:235px;flex-direction:column;align-items:flex-start;border-top:1px solid #a8a093;border-bottom:1px solid #a8a093;padding:24px 0 25px;transition:padding-left .15s}
+.digital-rows a:hover{padding-left:12px}
+.digital-rows span{font-size:10px;letter-spacing:.14em;color:#8c713f;font-weight:700}
+.digital-rows strong{font:400 clamp(42px,5vw,72px)/1.05 var(--serif);letter-spacing:-.05em;margin:auto 0 16px}
+.digital-rows small{font-size:13px;color:#5c5750}
+/* Booking */
+.contact-section{padding:104px 0 112px;background:#171918;color:#f4f1ea}
+.contact-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.65fr);gap:95px;align-items:center}
+.contact-grid h2{font:400 clamp(46px,5.7vw,85px)/1.04 var(--serif);letter-spacing:-.05em;margin:0;max-width:700px}
+.contact-grid p{font-size:14px;line-height:1.72;color:#c8c3b9;margin:0 0 28px;max-width:460px}
+.contact-action{display:inline-flex;align-items:center;justify-content:center;min-height:46px;background:#f4f1ea;color:#171918;padding:13px 21px;font-size:12px;font-weight:700}
+.contact-grid p.payment-note{font-size:10px;color:#aca9a2;max-width:360px;margin-top:24px;margin-bottom:0}
+.footer{background:#101211;color:#eee9df;padding:42px 0 52px}
+.footer-inner{display:flex;justify-content:space-between;gap:36px}
+.footer-name{font-size:12px;font-weight:700;letter-spacing:.12em}
+.footer-inner small{display:block;font-size:9px;color:#a9a69e;letter-spacing:.1em;margin-top:7px}
+.footer-inner nav{display:flex;flex-wrap:wrap;align-content:flex-start;justify-content:flex-end;gap:12px 24px;max-width:650px}
+.footer-inner nav a{font-size:11px;color:#d4d0c7}
+/* Native video viewer, no external script dependency */
+.film-dialog{padding:0;border:0;max-height:96svh;width:min(960px,calc(100% - 32px));max-width:none;color:#f4f1ea;background:#111312}
+.film-dialog::backdrop{background:rgba(0,0,0,.89)}
+.dialog-content{padding:16px 18px 22px;display:flex;flex-direction:column;align-items:center}
+.dialog-top{display:flex;width:100%;justify-content:space-between;align-items:center;gap:20px;padding:4px 1px 12px}
+.dialog-top strong{font-size:12px;font-weight:700;letter-spacing:.06em}
+.dialog-close{display:flex;align-items:center;gap:10px;color:#f4f1ea;background:transparent;border:1px solid #686a65;padding:8px 12px;cursor:pointer;font-size:11px}
+.dialog-close span:last-child{font-size:20px;line-height:1}
+.film-dialog video{max-height:calc(96svh - 125px);height:auto;max-width:100%;width:auto;aspect-ratio:9/16;background:#090909}
+.dialog-content>p{align-self:flex-start;color:#a8a7a1;font-size:11px;margin:12px 0 0}
+body.modal-open{overflow:hidden}
+.fade-in{opacity:1;transform:none}
+.has-motion .fade-in{opacity:0;transform:translateY(13px);transition:opacity .55s ease-out,transform .55s ease-out}
+.has-motion .fade-in.visible{opacity:1;transform:none}
+@media(max-width:1120px){
+  .main-nav{gap:18px}.header-controls{gap:14px}.header-inquiry{display:none}
+  .hero-copy{padding-inline:clamp(30px,4vw,70px)}
+  .hero h1{font-size:clamp(36px,4.4vw,62px)}
+  .field-grid{grid-template-columns:.8fr 1fr .65fr}
+}
+@media(max-width:830px){
+  .shell{width:min(100% - 44px,1400px)}
+  .header-inner{height:77px}
+  .brand{width:94px;height:70px}.brand img{width:94px;max-height:70px}
+  .menu-button{display:flex}.main-nav{display:none;position:absolute;top:77px;left:0;right:0;margin:0;padding:22px 23px 29px;background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:0;box-shadow:0 12px 22px rgba(0,0,0,.11)}
+  .main-nav.open{display:flex}
+  .main-nav a{width:100%;padding:12px 2px;border-bottom:1px solid #d1cbc0;font-size:17px;font-weight:500}
+  .hero-grid{grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr)}
+  .hero-media{height:600px;min-height:0}
+  .hero-copy{padding:48px 32px}
+  .hero h1{font-size:clamp(33px,4.6vw,52px)}
+  .hero-lower{display:none}
+  .discipline-inner{min-height:65px}
+  .discipline-inner span{font-size:9px}
+  .field-grid{grid-template-columns:1fr 1fr;gap:17px}
+  .field-intro{grid-column:1/-1;padding:0;max-width:550px;margin-bottom:18px}
+  .field-figure-primary img,.field-figure-secondary img{aspect-ratio:4/5}
+  .section-intro-split{gap:30px}
+  .feature-film{gap:45px}
+  .contact-grid{gap:40px}
+}
+@media(max-width:620px){
+  .shell{width:calc(100% - 36px)}
+  .header-inner{height:73px;gap:10px}
+  .brand{width:90px;height:67px}.brand img{width:90px;max-height:66px}
+  .main-nav{top:73px}
+  .header-controls{margin-left:auto;gap:21px}
+  .locale-switch{gap:9px}.locale-switch button{font-size:10px}
+  .menu-button{font-size:10px;gap:7px}.menu-line,.menu-line:after{width:16px}
+  .hero-grid{display:flex;flex-direction:column}
+  .hero-media{height:min(62svh,550px);min-height:370px;margin-left:-18px;margin-right:-18px;flex:none}
+  .hero-media video{object-position:center 46%}
+  .media-corner{top:14px;left:16px;padding:9px 11px;font-size:9px;gap:12px}
+  .media-caption{padding:13px 17px}
+  .media-caption strong{font-size:18px}
+  .media-caption span{font-size:9px}
+  .film-play{width:56px;height:56px}.film-play svg{width:24px;height:24px}
+  .hero-copy{padding:30px 0 45px}
+  .hero h1{font-size:clamp(34px,9.1vw,44px);line-height:1.09;letter-spacing:-.042em;margin:0 0 19px}
+  .hero .eyebrow{margin-bottom:13px}
+  .hero-text{font-size:13px;line-height:1.55;max-width:36ch}
+  .hero-actions{margin-top:24px;gap:12px 23px}
+  .main-action{min-height:44px;padding:12px 15px;font-size:11px}
+  .secondary-action{min-height:44px;font-size:11px}
+  .discipline-bar{display:none}
+  .film-section{padding:58px 0 72px}
+  .section-intro{margin-bottom:30px}
+  .eyebrow{font-size:9px;margin-bottom:11px}
+  .section-intro h2{font-size:clamp(37px,9.8vw,55px);margin-bottom:13px}
+  .section-intro p:last-child{font-size:13px}
+  .feature-film{grid-template-columns:1fr;gap:27px}
+  .feature-film-image{order:0;aspect-ratio:4/4.4;max-height:520px}
+  .feature-film-copy{order:1}
+  .feature-film-copy h3{font-size:38px;margin:13px 0 10px}
+  .feature-film-copy p{font-size:13px;margin-bottom:19px}
+  .watch-link{padding:14px 0}
+  .collection-link{margin-top:17px}
+  .feature-film-image-label{left:15px;bottom:15px;padding:11px 14px}
+  .field-section{padding:57px 0 70px}
+  .field-grid{grid-template-columns:1fr 1fr;gap:13px}
+  .field-intro{margin-bottom:8px}
+  .field-intro h2{font-size:clamp(37px,10vw,54px)}
+  .field-intro p:not(.eyebrow){font-size:13px;margin-bottom:19px}
+  .field-figure-primary img,.field-figure-secondary img{aspect-ratio:3/4}
+  .field-figure figcaption{font-size:9px;line-height:1.4}
+  .services-section,.digital-section{padding:61px 0 71px}
+  .section-intro-split{grid-template-columns:1fr;gap:12px;margin-bottom:27px}
+  .section-intro-split h2{font-size:clamp(36px,9.5vw,53px)}
+  .section-intro-split>p{font-size:13px}
+  .service-row{grid-template-columns:27px minmax(0,1fr);gap:9px 14px;padding:17px 0}
+  .service-row strong{font-size:24px;grid-column:2}
+  .service-row em{grid-column:2;text-align:left;font-size:11px}
+  .service-row span{grid-row:1/3;align-self:start;margin-top:6px}
+  .service-row:hover{padding-left:0}
+  .underlined-link{margin-top:24px}
+  .digital-rows{grid-template-columns:1fr;gap:20px}
+  .digital-rows a{min-height:150px;padding:18px 0}
+  .digital-rows strong{font-size:45px;margin:15px 0 11px}
+  .contact-section{padding:64px 0 70px}
+  .contact-grid{grid-template-columns:1fr;gap:18px}
+  .contact-grid h2{font-size:clamp(44px,10vw,58px)}
+  .contact-grid p{font-size:13px;margin-bottom:22px}
+  .footer-inner{flex-direction:column;gap:22px}
+  .footer-inner nav{justify-content:flex-start;gap:12px 19px}
+  .film-dialog{width:calc(100% - 12px)}
+  .dialog-content{padding:12px}
+}
+@media(max-width:350px){
+  .shell{width:calc(100% - 30px)}
+  .hero-media{margin-left:-15px;margin-right:-15px}
+  .brand,.brand img{width:83px}
+  .header-controls{gap:12px}.locale-switch{gap:5px}
+  .hero h1{font-size:32px}
+  .main-action,.secondary-action{font-size:10px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}.has-motion .fade-in{opacity:1!important;transform:none!important}}
+</style>
+  
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header" id="site-header">
-  <div class="page-wrap nav-shell">
-    <a class="site-logo" href="index.html" aria-label="Zoom-X Productions — homepage"><img src="assets/zoomx-logo.png?v=20261030-png" alt="Zoom-X Productions" width="150" height="125"></a>
-    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
-      <a href="work.html" data-t="navWork">Work</a>
-      <a href="videos.html" data-t="navFilms">Films</a>
-      <a href="services.html" data-t="navServices">Services</a>
-      <a href="pricing.html" data-t="navPricing">Pricing</a>
-      <a href="about.html" data-t="navAbout">About</a>
-      <a href="contact.html" data-t="navContact">Contact</a>
-    </nav>
-    <div class="header-actions">
-      <div class="locale-control" aria-label="Website language" role="group">
-        <button type="button" data-locale="en" aria-pressed="true">EN</button>
-        <button type="button" data-locale="fr" aria-pressed="false">FR</button>
-        <button type="button" data-locale="es" aria-pressed="false">ES</button>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html" aria-label="Zoom-X Productions homepage"><img src="assets/zoomx-logo.png?v=20261030-png" width="110" height="82" alt="Zoom-X Productions"></a>
+      <nav class="main-nav" id="main-nav" aria-label="Primary navigation">
+        <a href="videos.html" data-i18n="navFilms">Films</a>
+        <a href="work.html" data-i18n="navWork">Work</a>
+        <a href="services.html" data-i18n="navServices">Services</a>
+        <a href="pricing.html" data-i18n="navPricing">Pricing</a>
+        <a href="about.html" data-i18n="navAbout">About</a>
+        <a href="contact.html" data-i18n="navContact">Contact</a>
+      </nav>
+      <div class="header-controls">
+        <div class="locale-switch" role="group" aria-label="Language">
+          <button type="button" data-locale="en" aria-pressed="true">EN</button>
+          <button type="button" data-locale="fr" aria-pressed="false">FR</button>
+          <button type="button" data-locale="es" aria-pressed="false">ES</button>
+        </div>
+        <a class="header-inquiry" href="contact.html" data-i18n="headerQuote">Request a quote</a>
+        <button type="button" class="menu-button" id="menu-button" aria-controls="main-nav" aria-expanded="false"><span data-i18n="menu">Menu</span><span class="menu-line" aria-hidden="true"></span></button>
       </div>
-      <a class="header-contact" href="contact.html" data-t="quote">Request a quote</a>
-      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu"><span></span><span></span><span class="menu-text">Menu</span></button>
     </div>
-  </div>
-</header>
-<main id="main">
-  <section class="cinema-hero" id="top" aria-labelledby="hero-title">
-    <div class="hero-grain" aria-hidden="true"></div>
-    <div class="page-wrap hero-layout">
-      <div class="hero-copy">
-        <div class="hero-topline"><span class="eyebrow eyebrow-light" data-t="heroKicker">ZOOM-X / ORLANDO, FLORIDA</span><span class="hero-topline-rule" aria-hidden="true"></span></div>
-        <div class="hero-statement">
-          <p class="hero-suptitle" data-t="heroCategory">VIDEO PRODUCTION · PHOTOGRAPHY · DIGITAL</p>
-          <h1 id="hero-title"><span data-t="heroLine1">Film.</span><span data-t="heroLine2">Photo.</span><em data-t="heroLine3">Motion.</em></h1>
-          <p class="hero-description" data-t="heroDesc">Commercial videos, interviews, events, photography and digital projects. Produced by Zoom-X.</p>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-heading">
+      <div class="shell hero-grid">
+        <div class="hero-media">
+          <video id="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/video-portfolio/Claire-Compas-BTS-poster.webp" width="720" height="1280" aria-label="Silent excerpt from Claire Compas BTS">
+            <source src="assets/video-portfolio/Claire-Compas-BTS-web.mp4" type="video/mp4">
+          </video>
+          <div class="media-corner"><span data-i18n="featuredFilm">Featured film</span><span>01 / 02</span></div>
+          <button class="film-play hero-play" type="button" data-play-film="claire" aria-label="Play Claire Compas BTS with sound">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 11 7-11 7z" fill="currentColor"/></svg>
+          </button>
+          <div class="media-caption"><strong>Claire Compas BTS</strong><span>00:23</span></div>
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="heroOverline">ZOOM-X PRODUCTIONS / ORLANDO, FL</p>
+          <h1 id="hero-heading"><span data-i18n="heroLine1">Video production.</span><span data-i18n="heroLine2">Photography.</span><span data-i18n="heroLine3">Digital.</span></h1>
+          <p class="hero-text" data-i18n="heroDescription">Commercial videos, interviews, events, brand photography, social content and websites. Clear work, professionally produced.</p>
           <div class="hero-actions">
-            <button class="text-button light-button" type="button" data-film="zoom" data-t="watchMain">Watch the film <span aria-hidden="true">↗</span></button>
-            <a class="text-button subtle-button" href="work.html" data-t="allWork">Explore our work <span aria-hidden="true">↗</span></a>
+            <a href="work.html" class="main-action"><span data-i18n="heroWork">Explore our work</span></a>
+            <a href="contact.html" class="secondary-action"><span data-i18n="heroContact">Start a project</span></a>
           </div>
+          <div class="hero-lower"><span data-i18n="heroAside">FILM / PHOTO / DIGITAL SERVICES</span><a href="#films" data-i18n="heroScroll">VIEW SELECTED FILMS</a></div>
         </div>
-        <div class="hero-footnote"><span data-t="heroFootnote">ZOOM-X PRODUCTIONS — SELECTED VIDEO WORK</span><a href="#selected" data-t="scroll">SCROLL TO DISCOVER <span aria-hidden="true">↓</span></a></div>
       </div>
-      <div class="hero-film-set" aria-label="Selected Zoom-X films">
-        <div class="hero-tall-reel">
-          <video id="ambient-reel" class="hero-video" width="720" height="1280" poster="assets/video-portfolio/Zoom-and-Ang-poster.webp" muted playsinline loop preload="none" aria-label="Silent visual excerpt from Zoom and Ang" data-src="assets/video-portfolio/Zoom-and-Ang-web.mp4"></video>
-          <div class="hero-reel-tag"><span>01 / <strong>ZOOM AND ANG</strong></span><span>00:21</span></div>
-          <button type="button" class="round-play" data-film="zoom" aria-label="Play Zoom and Ang with sound"><span aria-hidden="true">▶</span></button>
+    </section>
+
+    <div class="discipline-bar" aria-label="Services overview"><div class="shell discipline-inner"><span data-i18n="barVideo">VIDEO</span><span data-i18n="barPhoto">PHOTOGRAPHY</span><span data-i18n="barEvent">EVENT COVERAGE</span><span data-i18n="barWeb">WEB & DIGITAL</span></div></div>
+
+    <section class="film-section" id="films" aria-labelledby="films-heading">
+      <div class="shell">
+        <div class="section-intro fade-in"><p class="eyebrow accent" data-i18n="filmsEyebrow">SELECTED PRODUCTION</p><h2 id="films-heading" data-i18n="filmsHeading">A closer look.</h2><p data-i18n="filmsIntro">Two pieces from the Zoom-X production portfolio. The full videos can be viewed with sound.</p></div>
+        <div class="feature-film">
+          <div class="feature-film-copy fade-in"><span class="project-no">02 / <span data-i18n="filmType">SHORT-FORM VIDEO</span></span><h3>Zoom and Ang</h3><p data-i18n="claireDescription">A short-form video from the Zoom-X production archive.</p><button class="watch-link" type="button" data-play-film="zoom"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 11 7-11 7z" fill="currentColor"/></svg><span data-i18n="watchFilm">Watch film</span><span class="duration">00:21</span></button><a href="videos.html" class="collection-link" data-i18n="allFilms">View film portfolio</a></div>
+          <button class="feature-film-image fade-in" type="button" data-play-film="zoom" aria-label="Watch Zoom and Ang"><img src="assets/video-portfolio/Zoom-and-Ang-poster.webp" alt="Two edited shots from a Zoom and Ang video" width="720" height="1280" loading="lazy"><span class="feature-film-image-label" data-i18n="openFilm">PLAY FILM</span></button>
         </div>
-        <button class="hero-side-reel" type="button" data-film="claire" aria-label="Play Claire Compas BTS with sound">
-          <img src="assets/video-portfolio/Claire-Compas-BTS-poster.webp" alt="Still from Claire Compas behind the scenes" width="720" height="1280" loading="eager">
-          <span class="side-caption"><small>02 / BEHIND THE SCENES</small><strong>CLAIRE COMPAS BTS</strong><span>WATCH <span aria-hidden="true">↗</span></span></span>
-        </button>
-        <span class="set-vertical-label" aria-hidden="true">ZOOM-X / MOVING IMAGE ARCHIVE</span>
       </div>
-    </div>
-    <div class="hero-bottom-line" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
-  </section>
+    </section>
 
-  <section class="selected-section" id="selected" aria-labelledby="selected-title">
-    <div class="page-wrap selected-intro reveal-on-view">
-      <div class="section-serial"><span>01 / 04</span><span data-t="sectionFilmsLabel">FILMS & VIDEO</span></div>
-      <div class="selected-heading"><h2 id="selected-title" data-t="selectedTitle">Selected moving images.</h2><p data-t="selectedDesc">Two short pieces from our production archive. Open either film to watch with sound.</p></div>
-    </div>
-    <div class="page-wrap film-gallery">
-      <button class="film-poster-film film-poster-main reveal-on-view" type="button" data-film="zoom" aria-label="Watch Zoom and Ang">
-        <img src="assets/video-portfolio/Zoom-and-Ang-poster.webp" alt="Portrait from Zoom and Ang" width="720" height="1280" loading="lazy">
-        <span class="film-poster-inner"><span class="film-poster-play" aria-hidden="true">▶</span><span data-t="playWithSound">WATCH WITH SOUND</span></span>
-      </button>
-      <div class="film-gallery-editorial reveal-on-view"><span class="gallery-line"></span><h3>Zoom and Ang</h3><p data-t="filmZoomType">Short-form film</p><span class="film-time">00:21 / 01</span><span class="film-gallery-caption" data-t="filmGalleryCaption">From the camera to the final edit.</span></div>
-      <button class="film-poster-film film-poster-secondary reveal-on-view" type="button" data-film="claire" aria-label="Watch Claire Compas BTS">
-        <img src="assets/video-portfolio/Claire-Compas-BTS-poster.webp" alt="Interview and behind-the-scenes coverage with a microphone" width="720" height="1280" loading="lazy">
-        <span class="film-poster-inner"><span class="film-poster-play" aria-hidden="true">▶</span><span data-t="playWithSound">WATCH WITH SOUND</span></span>
-      </button>
-      <div class="film-gallery-editorial film-gallery-editorial-second reveal-on-view"><span class="gallery-line"></span><h3>Claire Compas BTS</h3><p data-t="filmClaireType">Behind the scenes</p><span class="film-time">00:23 / 02</span><a href="videos.html" data-t="completeFilms">See the complete film collection <span aria-hidden="true">↗</span></a></div>
-    </div>
-  </section>
-
-  <section class="field-section" id="field" aria-labelledby="field-title">
-    <div class="page-wrap field-layout">
-      <div class="field-copy reveal-on-view"><div class="section-serial"><span>02 / 04</span><span data-t="sectionFieldLabel">ON LOCATION</span></div><h2 id="field-title" data-t="fieldTitle">Beyond the screen.</h2><p data-t="fieldDesc">Reporting, interviews and production days from the Zoom-X photo archive. Real moments, on set and in the field.</p><a class="text-button field-link" href="gallery.html" data-t="viewPhotos">See the photo journal <span aria-hidden="true">↗</span></a></div>
-      <div class="field-photos">
-        <a class="field-photo-a reveal-on-view" href="gallery.html"><img src="assets/gallery/press-conference.webp" width="853" height="853" loading="lazy" alt="Press reporting and interview coverage"><span>01 / <span data-t="photoPress">REPORTING</span></span></a>
-        <a class="field-photo-b reveal-on-view" href="gallery.html"><img src="assets/gallery/zoomx-production-team.webp" width="900" height="900" loading="lazy" alt="Zoom-X production team with a camera"><span>02 / <span data-t="photoTeam">PRODUCTION</span></span></a>
+    <section class="field-section" aria-labelledby="field-heading">
+      <div class="shell field-grid">
+        <div class="field-intro fade-in"><p class="eyebrow light" data-i18n="fieldEyebrow">PHOTOGRAPHY & PRODUCTION</p><h2 id="field-heading" data-i18n="fieldHeading">On set and in the field.</h2><p data-i18n="fieldDescription">Documentary coverage, production days and real moments from the Zoom-X photo archive.</p><a class="text-on-dark" href="gallery.html" data-i18n="fieldLink">Explore photography</a></div>
+        <figure class="field-figure field-figure-primary fade-in"><img src="assets/gallery/zoomx-production-team.webp" alt="Zoom-X production team and equipment on location" width="900" height="900" loading="lazy"><figcaption data-i18n="fieldCaption1">Production team</figcaption></figure>
+        <figure class="field-figure field-figure-secondary fade-in"><img src="assets/gallery/press-conference.webp" alt="Press reporting and event coverage" width="900" height="900" loading="lazy"><figcaption data-i18n="fieldCaption2">Event and media coverage</figcaption></figure>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="services-section" id="what-we-do" aria-labelledby="services-title">
-    <div class="page-wrap"><div class="services-title-line reveal-on-view"><div class="section-serial"><span>03 / 04</span><span data-t="sectionServicesLabel">WHAT WE DO</span></div><div class="services-title-copy"><h2 id="services-title" data-t="servicesTitle">Production & services.</h2><p data-t="servicesDesc">Tell us what you need. We quote the exact scope before production or development begins.</p></div></div>
-      <div class="service-rows">
-        <a href="service-video-photo.html" class="service-line reveal-on-view"><span class="service-n">01</span><div><h3 data-t="serviceFilm">Video production</h3><p data-t="serviceFilmDesc">Promo films, interviews, events and music videos</p></div><strong data-t="serviceFilmPrice">From $600</strong><span class="service-arr">↗</span></a>
-        <a href="service-video-photo.html" class="service-line reveal-on-view"><span class="service-n">02</span><div><h3 data-t="servicePhoto">Photography</h3><p data-t="servicePhotoDesc">Commercial, portrait and event photography</p></div><strong data-t="servicePhotoPrice">From $450</strong><span class="service-arr">↗</span></a>
-        <a href="service-marketing.html" class="service-line reveal-on-view"><span class="service-n">03</span><div><h3 data-t="serviceSocial">Social media & campaigns</h3><p data-t="serviceSocialDesc">Content, publishing and advertising</p></div><strong data-t="serviceSocialPrice">From $750/mo</strong><span class="service-arr">↗</span></a>
-        <a href="service-digital.html" class="service-line reveal-on-view"><span class="service-n">04</span><div><h3 data-t="serviceWeb">Websites</h3><p data-t="serviceWebDesc">Business websites and online portfolios</p></div><strong data-t="serviceWebPrice">From $350</strong><span class="service-arr">↗</span></a>
-        <a href="service-digital.html" class="service-line reveal-on-view"><span class="service-n">05</span><div><h3 data-t="serviceApp">Application development</h3><p data-t="serviceAppDesc">Web and mobile applications</p></div><strong data-t="serviceAppPrice">From $3,000</strong><span class="service-arr">↗</span></a>
-      </div><a class="service-see-all" href="pricing.html" data-t="servicesSeePricing">Full service and pricing guide <span aria-hidden="true">↗</span></a>
-    </div>
-  </section>
+    <section class="services-section" id="services" aria-labelledby="services-heading"><div class="shell"><div class="section-intro section-intro-split fade-in"><div><p class="eyebrow accent" data-i18n="servicesEyebrow">SERVICES</p><h2 id="services-heading" data-i18n="servicesHeading">What we produce.</h2></div><p data-i18n="servicesIntro">Explore the services below. We confirm the project scope, deliverables and final cost in writing before work begins.</p></div>
+      <div class="services-list">
+        <a class="service-row" href="service-video-photo.html"><span>01</span><strong data-i18n="serviceFilm">Video production</strong><em data-i18n="priceFilm">From $600</em></a>
+        <a class="service-row" href="service-video-photo.html"><span>02</span><strong data-i18n="servicePhoto">Photography</strong><em data-i18n="pricePhoto">From $450</em></a>
+        <a class="service-row" href="service-marketing.html"><span>03</span><strong data-i18n="serviceSocial">Social content & advertising</strong><em data-i18n="priceSocial">From $750/month</em></a>
+        <a class="service-row" href="service-digital.html"><span>04</span><strong data-i18n="serviceWeb">Website development</strong><em data-i18n="priceWeb">From $350</em></a>
+        <a class="service-row" href="service-digital.html"><span>05</span><strong data-i18n="serviceApps">Application development</strong><em data-i18n="priceApps">From $3,000</em></a>
+      </div><a class="underlined-link" href="pricing.html" data-i18n="servicesViewAll">See all packages and prices</a>
+    </div></section>
 
-  <section class="digital-section" id="digital" aria-labelledby="digital-title">
-    <div class="page-wrap digital-layout">
-      <div class="digital-copy reveal-on-view"><div class="section-serial"><span>04 / 04</span><span data-t="sectionDigitalLabel">DIGITAL WORK</span></div><h2 id="digital-title" data-t="digitalTitle">Work beyond production.</h2><p data-t="digitalDesc">Live websites, e-commerce and mobile experiences from our digital portfolio.</p></div>
-      <div class="digital-projects">
-        <a href="https://koneksyondatingapp.com" target="_blank" rel="noopener noreferrer" class="digital-project reveal-on-view"><span class="digital-project-index">01 / APPLICATION & WEB</span><strong>Koneksyon</strong><span data-t="digitalKoneksyon">Social platform · Website and mobile</span><i aria-hidden="true">↗</i></a>
-        <a href="https://olleniusa.com" target="_blank" rel="noopener noreferrer" class="digital-project reveal-on-view"><span class="digital-project-index">02 / E-COMMERCE</span><strong>Olleni</strong><span data-t="digitalOlleni">Hair and beauty online store</span><i aria-hidden="true">↗</i></a>
-      </div>
-    </div>
-  </section>
+    <section class="digital-section" aria-labelledby="digital-heading"><div class="shell"><div class="section-intro section-intro-split fade-in"><div><p class="eyebrow accent" data-i18n="digitalEyebrow">DIGITAL WORK</p><h2 id="digital-heading" data-i18n="digitalHeading">Projects beyond film.</h2></div><p data-i18n="digitalIntro">A selection of live digital projects. Project-specific contributions can be discussed on request.</p></div><div class="digital-rows"><a href="https://koneksyondatingapp.com" target="_blank" rel="noopener noreferrer"><span>01 / WEB & MOBILE</span><strong>Koneksyon</strong><small data-i18n="digitalKoneksyon">Social platform and mobile applications</small></a><a href="https://olleniusa.com" target="_blank" rel="noopener noreferrer"><span>02 / E-COMMERCE</span><strong>Olleni</strong><small data-i18n="digitalOlleni">Hair and beauty online store</small></a></div></div></section>
 
-  <section class="pricing-section" id="rates" aria-labelledby="rates-title">
-    <div class="page-wrap"><div class="price-intro reveal-on-view"><span class="eyebrow" data-t="priceKicker">STARTING RATES / USD</span><h2 id="rates-title" data-t="priceTitle">A starting point.</h2><p data-t="priceDesc">Final packages and production costs are confirmed in a written quote.</p></div><div class="price-band"><a href="pricing.html#photo"><span data-t="ratePhoto">Commercial photo</span><strong>$450</strong></a><a href="pricing.html#promo"><span data-t="ratePromo">Promo video</span><strong>$600</strong></a><a href="pricing.html#web"><span data-t="rateWeb">Website</span><strong>$350+</strong></a><a href="pricing.html#apps"><span data-t="rateApp">Application</span><strong>$3,000+</strong></a></div></div>
-  </section>
+    <section class="contact-section" aria-labelledby="contact-heading"><div class="shell contact-grid"><div><p class="eyebrow light" data-i18n="contactEyebrow">WORK WITH ZOOM-X</p><h2 id="contact-heading" data-i18n="contactHeading">Tell us about your project.</h2></div><div><p data-i18n="contactDescription">Share your date, location and the work you need. We will confirm the scope and pricing before payment.</p><a class="contact-action" href="contact.html" data-i18n="contactLink">Request a quote</a><p class="payment-note" data-i18n="paymentNote">Payments by Zelle after written confirmation. Booking terms apply.</p></div></div></section>
+  </main>
 
-  <section class="contact-section" id="inquiry" aria-labelledby="contact-title"><div class="page-wrap contact-layout"><div><span class="eyebrow eyebrow-light" data-t="contactKicker">WORK WITH ZOOM-X</span><h2 id="contact-title" data-t="contactTitle">Have a project in mind?</h2></div><div class="contact-right"><p data-t="contactDesc">Tell us the kind of work, your location and when you need it. We will confirm the details before payment.</p><a class="contact-cta" href="contact.html" data-t="contactButton">Start a project <span aria-hidden="true">↗</span></a><span class="contact-meta" data-t="contactMeta">ORLANDO, FLORIDA / AVAILABLE FOR PROJECT INQUIRIES</span></div></div></section>
-</main>
-<footer class="site-footer"><div class="page-wrap footer-row"><div><a href="index.html" class="footer-brand">ZOOM-X PRODUCTIONS</a><small>© <span id="year">2026</span> ZOOM-X PRODUCTIONS</small></div><nav aria-label="Footer navigation"><a href="videos.html" data-t="navFilms">Films</a><a href="work.html" data-t="navWork">Work</a><a href="services.html" data-t="navServices">Services</a><a href="pricing.html" data-t="navPricing">Pricing</a><a href="booking-terms.html" data-t="footerPolicy">Payment policy</a></nav></div></footer>
-<div class="scroll-progress" aria-hidden="true"><span id="scroll-progress"></span></div>
-<dialog class="film-dialog" id="film-dialog" aria-label="Zoom-X video viewer"><div class="dialog-content"><div class="dialog-topbar"><span id="dialog-heading">ZOOM-X / FILM</span><button type="button" id="dialog-close" class="dialog-close" aria-label="Close video">CLOSE ×</button></div><video id="dialog-player" controls playsinline preload="none" width="720" height="1280"></video><p class="dialog-footer" data-t="modalFooter">Watch with sound · Tap pause to stop playback</p></div></dialog>
-</body>
+  <footer class="footer"><div class="shell footer-inner"><div><a href="index.html" class="footer-name">ZOOM-X PRODUCTIONS</a><small>ORLANDO, FLORIDA</small><small>&copy; <span id="year">2026</span></small></div><nav aria-label="Footer navigation"><a href="videos.html" data-i18n="navFilms">Films</a><a href="work.html" data-i18n="navWork">Work</a><a href="services.html" data-i18n="navServices">Services</a><a href="pricing.html" data-i18n="navPricing">Pricing</a><a href="contact.html" data-i18n="navContact">Contact</a><a href="booking-terms.html" data-i18n="footerPolicy">Payment policy</a></nav></div></footer>
+
+  <dialog class="film-dialog" id="film-dialog" aria-label="Zoom-X video player"><div class="dialog-content"><div class="dialog-top"><strong id="dialog-title">Zoom-X / Film</strong><button type="button" class="dialog-close" id="dialog-close"><span data-i18n="close">Close</span><span aria-hidden="true">&times;</span></button></div><video id="dialog-player" controls playsinline preload="none" width="720" height="1280"></video><p data-i18n="modalFootnote">Watch with sound. Video playback stops when you close this window.</p></div></dialog>
+<script id="zoomx-studio-interactions">/* Zoom-X homepage: language, navigation, accessible video viewer and restrained motion. */
+(()=>{
+  'use strict';
+  const strings={
+    fr:{
+      navFilms:'Films',navWork:'Projets',navServices:'Services',navPricing:'Tarifs',navAbout:'A propos',navContact:'Contact',headerQuote:'Demander un devis',menu:'Menu',close:'Fermer',footerPolicy:'Conditions de paiement',
+      featuredFilm:'Film a la une',heroOverline:'ZOOM-X PRODUCTIONS / ORLANDO, FL',heroLine1:'Production vid\u00e9o.',heroLine2:'Photographie.',heroLine3:'Digital.',
+      heroDescription:'Vides publicitaires, interviews, \u00e9v\u00e9nements, photographie de marque, contenu social et sites web. Une production professionnelle, du d\u00e9but \u00e0 la fin.'.replace('Vides','Vid\u00e9os'),
+      heroWork:'Voir nos projets',heroContact:'D\u00e9marrer un projet',heroAside:'FILM / PHOTO / SERVICES DIGITAUX',heroScroll:'D\u00c9COUVRIR LES FILMS',
+      barVideo:'VID\u00c9O',barPhoto:'PHOTOGRAPHIE',barEvent:'\u00c9V\u00c9NEMENTS',barWeb:'WEB ET DIGITAL',
+      filmsEyebrow:'PRODUCTION S\u00c9LECTIONN\u00c9E',filmsHeading:'De plus pr\u00e8s.',filmsIntro:'Deux vid\u00e9os du portfolio Zoom-X. Vous pouvez regarder les versions compl\u00e8tes avec le son.',
+      filmType:'VID\u00c9O COURTE',claireDescription:'Une courte vid\u00e9o tir\u00e9e des archives de production Zoom-X.',watchFilm:'Voir le film',allFilms:'Voir le portfolio vid\u00e9o',openFilm:'VOIR LE FILM',
+      fieldEyebrow:'PHOTOGRAPHIE ET PRODUCTION',fieldHeading:'Sur le terrain et en production.',fieldDescription:'Reportages, journ\u00e9es de tournage et moments r\u00e9els tir\u00e9s des archives photo de Zoom-X.',fieldLink:'D\u00e9couvrir les photos',fieldCaption1:'\u00c9quipe de production',fieldCaption2:'Couverture m\u00e9diatique',
+      servicesEyebrow:'SERVICES',servicesHeading:'Ce que nous produisons.',servicesIntro:'D\u00e9couvrez nos services. Le p\u00e9rim\u00e8tre, les livrables et le prix final sont confirm\u00e9s par \u00e9crit avant le d\u00e9but du projet.',
+      serviceFilm:'Production vid\u00e9o',priceFilm:'D\u00e8s 600 $',servicePhoto:'Photographie',pricePhoto:'D\u00e8s 450 $',serviceSocial:'Contenu social et publicit\u00e9',priceSocial:'D\u00e8s 750 $/mois',serviceWeb:'Cr\u00e9ation de sites web',priceWeb:'D\u00e8s 350 $',serviceApps:'D\u00e9veloppement d\u2019applications',priceApps:'D\u00e8s 3 000 $',servicesViewAll:'Voir tous les forfaits et tarifs',
+      digitalEyebrow:'PROJETS DIGITAUX',digitalHeading:'Au-del\u00e0 de la vid\u00e9o.',digitalIntro:'Une s\u00e9lection de projets digitaux actifs. Contributions pr\u00e9cises disponibles sur demande.',digitalKoneksyon:'Plateforme sociale et applications mobiles',digitalOlleni:'Boutique en ligne de produits capillaires et de beaut\u00e9',
+      contactEyebrow:'TRAVAILLER AVEC ZOOM-X',contactHeading:'Parlez-nous de votre projet.',contactDescription:'Indiquez la date, le lieu et les prestations souhait\u00e9es. Nous confirmerons le projet et son prix avant le paiement.',contactLink:'Demander un devis',paymentNote:'Paiement par Zelle apr\u00e8s confirmation \u00e9crite. Conditions de r\u00e9servation applicables.',modalFootnote:'Regardez avec le son. La vid\u00e9o s\u2019arr\u00eate \u00e0 la fermeture.'
+    },
+    es:{
+      navFilms:'Pel\u00edculas',navWork:'Trabajos',navServices:'Servicios',navPricing:'Precios',navAbout:'Nosotros',navContact:'Contacto',headerQuote:'Pedir cotizaci\u00f3n',menu:'Men\u00fa',close:'Cerrar',footerPolicy:'Pol\u00edtica de pago',
+      featuredFilm:'Video destacado',heroOverline:'ZOOM-X PRODUCTIONS / ORLANDO, FL',heroLine1:'Producci\u00f3n de video.',heroLine2:'Fotograf\u00eda.',heroLine3:'Digital.',
+      heroDescription:'Videos comerciales, entrevistas, eventos, fotograf\u00eda de marca, contenido social y sitios web. Producci\u00f3n profesional de principio a fin.',heroWork:'Ver nuestros trabajos',heroContact:'Iniciar un proyecto',heroAside:'VIDEO / FOTO / SERVICIOS DIGITALES',heroScroll:'VER VIDEOS DESTACADOS',
+      barVideo:'VIDEO',barPhoto:'FOTOGRAF\u00cdA',barEvent:'COBERTURA DE EVENTOS',barWeb:'WEB Y DIGITAL',
+      filmsEyebrow:'PRODUCCI\u00d3N DESTACADA',filmsHeading:'Una mirada de cerca.',filmsIntro:'Dos piezas del portafolio de Zoom-X. Mira las versiones completas con sonido.',
+      filmType:'VIDEO CORTO',claireDescription:'Un video corto del archivo de producci\u00f3n de Zoom-X.',watchFilm:'Ver video',allFilms:'Ver portafolio de videos',openFilm:'VER VIDEO',
+      fieldEyebrow:'FOTOGRAF\u00cdA Y PRODUCCI\u00d3N',fieldHeading:'En el set y en terreno.',fieldDescription:'Reportajes, d\u00edas de producci\u00f3n y momentos reales del archivo fotogr\u00e1fico de Zoom-X.',fieldLink:'Explorar fotograf\u00edas',fieldCaption1:'Equipo de producci\u00f3n',fieldCaption2:'Cobertura de eventos',
+      servicesEyebrow:'SERVICIOS',servicesHeading:'Lo que producimos.',servicesIntro:'Explora los servicios. Confirmamos por escrito el alcance, los entregables y el costo final antes de comenzar.',
+      serviceFilm:'Producci\u00f3n de video',priceFilm:'Desde $600',servicePhoto:'Fotograf\u00eda',pricePhoto:'Desde $450',serviceSocial:'Contenido social y publicidad',priceSocial:'Desde $750/mes',serviceWeb:'Desarrollo web',priceWeb:'Desde $350',serviceApps:'Desarrollo de aplicaciones',priceApps:'Desde $3,000',servicesViewAll:'Ver todos los paquetes y precios',
+      digitalEyebrow:'TRABAJOS DIGITALES',digitalHeading:'M\u00e1s all\u00e1 del video.',digitalIntro:'Una selecci\u00f3n de proyectos digitales activos. Las contribuciones espec\u00edficas se pueden consultar.',digitalKoneksyon:'Plataforma social y aplicaciones m\u00f3viles',digitalOlleni:'Tienda en l\u00ednea de belleza y cuidado capilar',
+      contactEyebrow:'TRABAJA CON ZOOM-X',contactHeading:'Cu\u00e9ntanos sobre tu proyecto.',contactDescription:'Comparte la fecha, la ubicaci\u00f3n y los servicios que necesitas. Confirmaremos el alcance y el precio antes del pago.',contactLink:'Pedir cotizaci\u00f3n',paymentNote:'Pagos por Zelle tras la confirmaci\u00f3n escrita. Se aplican condiciones de reserva.',modalFootnote:'Mira con sonido. El video se detiene al cerrar esta ventana.'
+    }
+  };
+  const originals=new Map([...document.querySelectorAll('[data-i18n]')].map(el=>[el,el.textContent]));
+  const langButtons=[...document.querySelectorAll('[data-locale]')];
+  let currentLanguage='en';
+  const applyLanguage=(lang)=>{
+    if(!['en','fr','es'].includes(lang))lang='en';
+    currentLanguage=lang;
+    document.documentElement.lang=lang;
+    for(const [element,text] of originals){element.textContent=lang==='en'?text:(strings[lang]?.[element.dataset.i18n]??text)}
+    for(const button of langButtons){const selected=button.dataset.locale===lang;button.setAttribute('aria-pressed',String(selected))}
+    try{localStorage.setItem('zoomx-lang',lang)}catch(error){}
+    updateMenuText();
+  };
+  const nav=document.querySelector('#main-nav');
+  const menuButton=document.querySelector('#menu-button');
+  const menuText=menuButton?.querySelector('[data-i18n="menu"]');
+  function updateMenuText(){
+    if(!menuText)return;
+    if(menuButton.getAttribute('aria-expanded')==='true') menuText.textContent=currentLanguage==='fr'?'Fermer':currentLanguage==='es'?'Cerrar':'Close';
+    else menuText.textContent=currentLanguage==='fr'?'Menu':currentLanguage==='es'?'Men\u00fa':'Menu';
+  }
+  const closeNav=()=>{nav?.classList.remove('open');menuButton?.setAttribute('aria-expanded','false');updateMenuText()};
+  menuButton?.addEventListener('click',()=>{
+    const opened=nav?.classList.toggle('open')||false;
+    menuButton.setAttribute('aria-expanded',String(opened));
+    updateMenuText();
+  });
+  nav?.querySelectorAll('a').forEach(link=>link.addEventListener('click',closeNav));
+  langButtons.forEach(button=>button.addEventListener('click',()=>applyLanguage(button.dataset.locale)));
+  let storedLanguage='en';
+  try{storedLanguage=localStorage.getItem('zoomx-lang')||'en'}catch(error){}
+  applyLanguage(storedLanguage);
+  const year=document.querySelector('#year');if(year)year.textContent=String(new Date().getFullYear());
+
+  const heroVideo=document.querySelector('#hero-video');
+  const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const saveData=navigator.connection?.saveData===true;
+  let visibleHero=true;
+  let dialogOpen=false;
+  const playAmbient=()=>{
+    if(!heroVideo||reducedMotion||saveData||dialogOpen||!visibleHero)return;
+    heroVideo.muted=true;
+    const attempt=heroVideo.play();if(attempt&&typeof attempt.catch==='function')attempt.catch(()=>{});
+  };
+  if(heroVideo){
+    if(reducedMotion||saveData){heroVideo.removeAttribute('autoplay');heroVideo.pause()}
+    else{
+      heroVideo.addEventListener('loadedmetadata',playAmbient,{once:true});
+      playAmbient();
+      if('IntersectionObserver'in window){
+        const observer=new IntersectionObserver(entries=>{visibleHero=entries[0]?.isIntersecting??false;if(visibleHero)playAmbient();else heroVideo.pause()},{threshold:.08});
+        observer.observe(heroVideo);
+      }
+    }
+  }
+  const filmMap={
+    zoom:{name:'Zoom and Ang',source:'assets/video-portfolio/Zoom-and-Ang-web.mp4',poster:'assets/video-portfolio/Zoom-and-Ang-poster.webp'},
+    claire:{name:'Claire Compas BTS',source:'assets/video-portfolio/Claire-Compas-BTS-web.mp4',poster:'assets/video-portfolio/Claire-Compas-BTS-poster.webp'}
+  };
+  const dialog=document.querySelector('#film-dialog');
+  const dialogPlayer=document.querySelector('#dialog-player');
+  const dialogTitle=document.querySelector('#dialog-title');
+  const dialogClose=document.querySelector('#dialog-close');
+  let originControl=null;
+  const stopFilm=()=>{
+    if(!dialog)return;
+    dialogPlayer?.pause();
+    if(dialogPlayer){dialogPlayer.removeAttribute('src');dialogPlayer.load()}
+    if(dialog.open)dialog.close();
+    document.body.classList.remove('modal-open');dialogOpen=false;
+    originControl?.focus({preventScroll:true});originControl=null;
+    playAmbient();
+  };
+  document.querySelectorAll('[data-play-film]').forEach(control=>control.addEventListener('click',()=>{
+    const film=filmMap[control.dataset.playFilm];if(!film||!dialog||!dialogPlayer)return;
+    originControl=control;dialogOpen=true;heroVideo?.pause();
+    dialogTitle.textContent=film.name;
+    dialogPlayer.setAttribute('poster',film.poster);
+    dialogPlayer.src=film.source;
+    document.body.classList.add('modal-open');
+    if(typeof dialog.showModal==='function')dialog.showModal();else dialog.setAttribute('open','');
+    const p=dialogPlayer.play();if(p&&typeof p.catch==='function')p.catch(()=>{});
+    dialogClose?.focus({preventScroll:true});
+  }));
+  dialogClose?.addEventListener('click',stopFilm);
+  dialog?.addEventListener('cancel',event=>{event.preventDefault();stopFilm()});
+  dialog?.addEventListener('click',event=>{if(event.target===dialog)stopFilm()});
+  document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!dialog?.open)closeNav()});
+  if('IntersectionObserver'in window&&!reducedMotion){
+    document.documentElement.classList.add('has-motion');
+    const observer=new IntersectionObserver(entries=>{
+      for(const entry of entries){if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}
+    },{threshold:.08,rootMargin:'0px 0px -25px 0px'});
+    document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
+  }
+})();
+</script></body>
 </html>
