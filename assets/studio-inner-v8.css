@@ -205,3 +205,12 @@ body.studio-inner{background:#f5f3ee;color:#161613;font:15px/1.55 Arial,'Helveti
 }
 @media(max-width:390px){.studio-inner .v4-page-head-grid h1,.studio-inner .page-hero h1,.studio-inner .zx-gallery-intro h1,.studio-inner .z5-pricing-hero h1{font-size:37px}.studio-inner .zx-photo-grid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.studio-inner *{transition:none!important;scroll-behavior:auto!important}}
+
+/* Zoom-X digital starting prices: website $350 / applications $3,000 */
+.studio-inner .v4-service-line .service-digital-prices{font-size:12px;font-weight:700;letter-spacing:0;margin-top:8px;color:#8a6a30}
+.studio-inner .digital-price-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid #aaa39a;margin-top:24px}
+.studio-inner .digital-price-pair a{display:flex;flex-direction:column;justify-content:space-between;gap:17px;padding:16px 18px 13px 0;border-bottom:1px solid #d4d0c7;min-width:0}
+.studio-inner .digital-price-pair a+a{padding-left:20px;border-left:1px solid #d4d0c7}
+.studio-inner .digital-price-pair span{font-size:10px;letter-spacing:.1em;font-weight:700;color:#756b5e}
+.studio-inner .digital-price-pair strong{font:400 clamp(27px,3.4vw,43px)/1 Georgia,serif;letter-spacing:-.035em}
+@media(max-width:440px){.studio-inner .digital-price-pair span{font-size:9px}.studio-inner .digital-price-pair strong{font-size:28px}}
