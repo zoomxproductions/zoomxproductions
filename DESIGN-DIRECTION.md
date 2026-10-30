@@ -104,14 +104,15 @@ The supplied Zoom-X Services & Package Guide is now the source for public starti
 - Commercial photo session: $450.
 - Drone add-on: $300+.
 - Social media management: $750+ / $1,250+ / $2,000+ per month.
-- Website Essentials: $1,500+.
+- Website Starter: $350+ (current starting price). Business Website Essentials: $1,500+ (separate, up-to-five-page package).
+- Application development: $3,000+ (current starting price; final scope quoted).
 - Paid social management: $300+ / month plus ad spend.
 - Digital advertising and OOH strategy: $1,500+ / campaign.
 - Marketing consultation: $1,100+.
 - Ongoing consulting: $1,100/month.
 - Quarterly strategy: $2,500/quarter.
 
-Where the guide does not establish a standard price (for example mobile-app development or journalism assignments), the site does not invent one.
+Where the original guide omitted application pricing, the studio's newer direct instruction supplies the $3,000+ application-development starting rate. Journalism assignments remain quoted by scope.
 
 ### Payment and booking
 
@@ -136,3 +137,11 @@ A dedicated Payment & Booking Policy page states that payments, deposits, retain
 - No emoji-led service tiles.
 - No fake customer counts, awards or testimonial quotes.
 - Mobile layouts collapse into clean rows, not stacked floating cards.
+
+
+## October 30, 2026 — pricing and portfolio corrections
+- Current website development entry rate: **from $350**. The original five-page Business Website Essentials offer remains **$1,500+** as a separate higher-scope package.
+- Current application development entry rate: **from $3,000**.
+- Keep wording as *starting price*, never fixed scope or a guaranteed quote.
+- Olleni (olleniusa.com) is included in Work as a beauty/hair e-commerce reference, under Commerce.
+- Keep all three languages consistent and remove legacy “no public price list” wording.
