@@ -29,3 +29,30 @@ document.addEventListener('DOMContentLoaded',()=>{
     button.addEventListener('click',()=>document.querySelectorAll('[data-lang]').forEach(other=>other.setAttribute('aria-pressed',String(other===button))));
   });
 });
+
+
+// Zoom-X v5: add Pricing to the shared navigation without rewriting every legacy page.
+document.addEventListener('DOMContentLoaded',()=>{
+  const current=(location.pathname.split('/').pop()||'index.html').toLowerCase();
+  document.querySelectorAll('.navlinks').forEach(nav=>{
+    if(!nav.querySelector('a[href="pricing.html"]')){
+      const link=document.createElement('a');
+      link.href='pricing.html';
+      link.dataset.i18n='nav.pricing';
+      link.textContent='Pricing';
+      if(current==='pricing.html') link.classList.add('active');
+      const contact=nav.querySelector('a[href="contact.html"]');
+      nav.insertBefore(link,contact||null);
+    }
+  });
+  document.querySelectorAll('.footer-links').forEach(footer=>{
+    if(!footer.querySelector('a[href="pricing.html"]')){
+      const link=document.createElement('a');
+      link.href='pricing.html';
+      link.dataset.i18n='nav.pricing';
+      link.textContent='Pricing';
+      const contact=footer.querySelector('a[href="contact.html"]');
+      footer.insertBefore(link,contact||null);
+    }
+  });
+});
