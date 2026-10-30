@@ -124,17 +124,6 @@ a{color:inherit;text-decoration:none}button{font:inherit}img{max-width:100%;disp
 .footer-inner small{display:block;font-size:9px;color:#a9a69e;letter-spacing:.1em;margin-top:7px}
 .footer-inner nav{display:flex;flex-wrap:wrap;align-content:flex-start;justify-content:flex-end;gap:12px 24px;max-width:650px}
 .footer-inner nav a{font-size:11px;color:#d4d0c7}
-/* Native video viewer, no external script dependency */
-.film-dialog{padding:0;border:0;max-height:96svh;width:min(960px,calc(100% - 32px));max-width:none;color:#f4f1ea;background:#111312}
-.film-dialog::backdrop{background:rgba(0,0,0,.89)}
-.dialog-content{padding:16px 18px 22px;display:flex;flex-direction:column;align-items:center}
-.dialog-top{display:flex;width:100%;justify-content:space-between;align-items:center;gap:20px;padding:4px 1px 12px}
-.dialog-top strong{font-size:12px;font-weight:700;letter-spacing:.06em}
-.dialog-close{display:flex;align-items:center;gap:10px;color:#f4f1ea;background:transparent;border:1px solid #686a65;padding:8px 12px;cursor:pointer;font-size:11px}
-.dialog-close span:last-child{font-size:20px;line-height:1}
-.film-dialog video{max-height:calc(96svh - 125px);height:auto;max-width:100%;width:auto;aspect-ratio:9/16;background:#090909}
-.dialog-content>p{align-self:flex-start;color:#a8a7a1;font-size:11px;margin:12px 0 0}
-body.modal-open{overflow:hidden}
 .fade-in{opacity:1;transform:none}
 .has-motion .fade-in{opacity:0;transform:translateY(13px);transition:opacity .55s ease-out,transform .55s ease-out}
 .has-motion .fade-in.visible{opacity:1;transform:none}
@@ -228,8 +217,6 @@ body.modal-open{overflow:hidden}
   .contact-grid p{font-size:13px;margin-bottom:22px}
   .footer-inner{flex-direction:column;gap:22px}
   .footer-inner nav{justify-content:flex-start;gap:12px 19px}
-  .film-dialog{width:calc(100% - 12px)}
-  .dialog-content{padding:12px}
 }
 @media(max-width:350px){
   .shell{width:calc(100% - 30px)}
@@ -240,6 +227,19 @@ body.modal-open{overflow:hidden}
   .main-action,.secondary-action{font-size:10px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}.has-motion .fade-in{opacity:1!important;transform:none!important}}
+
+/* Inline film playback: no dialogs, no fullscreen takeover, no cropped portrait footage. */
+[hidden]{display:none!important}
+.hero-media::before{content:"";position:absolute;inset:-20px;z-index:0;background:linear-gradient(rgba(15,16,15,.4),rgba(15,16,15,.55)),url("assets/video-portfolio/Claire-Compas-BTS-poster.webp") center/cover no-repeat;filter:blur(26px);transform:scale(1.05);pointer-events:none}
+.hero-media video{z-index:1;object-fit:contain;object-position:center;filter:none;background:transparent}
+.hero-media.is-playing .media-corner,.hero-media.is-playing .media-caption,.hero-media.is-playing .hero-play{display:none!important}
+.feature-film-image{width:min(100%,435px);max-height:none;aspect-ratio:9/16;display:flex;align-items:center;justify-content:center;margin-left:auto;margin-right:0;background:#121413;overflow:hidden;cursor:default}
+.feature-film-image video{display:block;width:100%;height:100%;aspect-ratio:9/16;object-fit:contain;background:#121413}
+.feature-film-image-label{display:flex;align-items:center;gap:10px;bottom:16px;left:16px;border:1px solid rgba(255,255,255,.2);cursor:pointer;z-index:2}
+.feature-film-image-label svg{width:15px;height:15px}
+.feature-film-image.is-playing .feature-film-image-label{display:none!important}
+.hero-media video:focus-visible,.feature-film-image video:focus-visible{outline:2px solid #cbaa70;outline-offset:-3px}
+@media(max-width:620px){.feature-film-image{width:min(100%,390px);max-height:none;aspect-ratio:9/16;margin-inline:auto}.hero-media::before{filter:blur(18px)}}
 </style>
   
 </head>
@@ -272,7 +272,7 @@ body.modal-open{overflow:hidden}
     <section class="hero" id="top" aria-labelledby="hero-heading">
       <div class="shell hero-grid">
         <div class="hero-media">
-          <video id="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/video-portfolio/Claire-Compas-BTS-poster.webp" width="720" height="1280" aria-label="Silent excerpt from Claire Compas BTS">
+          <video id="hero-video" playsinline webkit-playsinline preload="none" poster="assets/video-portfolio/Claire-Compas-BTS-poster.webp" width="720" height="1280" aria-label="Claire Compas BTS, watch here with sound">
             <source src="assets/video-portfolio/Claire-Compas-BTS-web.mp4" type="video/mp4">
           </video>
           <div class="media-corner"><span data-i18n="featuredFilm">Featured film</span><span>01 / 02</span></div>
@@ -300,8 +300,14 @@ body.modal-open{overflow:hidden}
       <div class="shell">
         <div class="section-intro fade-in"><p class="eyebrow accent" data-i18n="filmsEyebrow">SELECTED PRODUCTION</p><h2 id="films-heading" data-i18n="filmsHeading">A closer look.</h2><p data-i18n="filmsIntro">Two pieces from the Zoom-X production portfolio. The full videos can be viewed with sound.</p></div>
         <div class="feature-film">
-          <div class="feature-film-copy fade-in"><span class="project-no">02 / <span data-i18n="filmType">SHORT-FORM VIDEO</span></span><h3>Zoom and Ang</h3><p data-i18n="claireDescription">A short-form video from the Zoom-X production archive.</p><button class="watch-link" type="button" data-play-film="zoom"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 11 7-11 7z" fill="currentColor"/></svg><span data-i18n="watchFilm">Watch film</span><span class="duration">00:21</span></button><a href="videos.html" class="collection-link" data-i18n="allFilms">View film portfolio</a></div>
-          <button class="feature-film-image fade-in" type="button" data-play-film="zoom" aria-label="Watch Zoom and Ang"><img src="assets/video-portfolio/Zoom-and-Ang-poster.webp" alt="Two edited shots from a Zoom and Ang video" width="720" height="1280" loading="lazy"><span class="feature-film-image-label" data-i18n="openFilm">PLAY FILM</span></button>
+          <div class="feature-film-copy fade-in"><span class="project-no">02 / <span data-i18n="filmType">INTERVIEW EDIT</span></span><h3 data-i18n="editFilmTitle">Interview edit — before &amp; after</h3><p data-i18n="claireDescription">A before-and-after look at the interview edit and its color treatment.</p><button class="watch-link" type="button" data-play-film="zoom"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 11 7-11 7z" fill="currentColor"/></svg><span data-i18n="watchFilm">Watch film</span><span class="duration">00:21</span></button><a href="videos.html" class="collection-link" data-i18n="allFilms">View film portfolio</a></div>
+          <div class="feature-film-image fade-in" aria-label="Interview editing before and after video">
+            <video id="edit-video" playsinline webkit-playsinline preload="none" poster="assets/video-portfolio/Zoom-and-Ang-poster.webp" width="720" height="1280" aria-label="Interview edit before and after, play here with sound">
+              <source src="assets/video-portfolio/Zoom-and-Ang-web.mp4" type="video/mp4">
+              Your browser does not support MP4 playback.
+            </video>
+            <button class="feature-film-image-label" type="button" data-play-film="zoom" aria-label="Play the interview edit in this frame"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 11 7-11 7z" fill="currentColor"/></svg><span data-i18n="openFilm">PLAY FILM</span></button>
+          </div>
         </div>
       </div>
     </section>
@@ -331,7 +337,6 @@ body.modal-open{overflow:hidden}
 
   <footer class="footer"><div class="shell footer-inner"><div><a href="index.html" class="footer-name">ZOOM-X PRODUCTIONS</a><small>ORLANDO, FLORIDA</small><small>&copy; <span id="year">2026</span></small></div><nav aria-label="Footer navigation"><a href="videos.html" data-i18n="navFilms">Films</a><a href="work.html" data-i18n="navWork">Work</a><a href="services.html" data-i18n="navServices">Services</a><a href="pricing.html" data-i18n="navPricing">Pricing</a><a href="contact.html" data-i18n="navContact">Contact</a><a href="booking-terms.html" data-i18n="footerPolicy">Payment policy</a></nav></div></footer>
 
-  <dialog class="film-dialog" id="film-dialog" aria-label="Zoom-X video player"><div class="dialog-content"><div class="dialog-top"><strong id="dialog-title">Zoom-X / Film</strong><button type="button" class="dialog-close" id="dialog-close"><span data-i18n="close">Close</span><span aria-hidden="true">&times;</span></button></div><video id="dialog-player" controls playsinline preload="none" width="720" height="1280"></video><p data-i18n="modalFootnote">Watch with sound. Video playback stops when you close this window.</p></div></dialog>
 <script id="zoomx-studio-interactions">/* Zoom-X homepage: language, navigation, accessible video viewer and restrained motion. */
 (()=>{
   'use strict';
@@ -343,7 +348,7 @@ body.modal-open{overflow:hidden}
       heroWork:'Voir nos projets',heroContact:'D\u00e9marrer un projet',heroAside:'FILM / PHOTO / SERVICES DIGITAUX',heroScroll:'D\u00c9COUVRIR LES FILMS',
       barVideo:'VID\u00c9O',barPhoto:'PHOTOGRAPHIE',barEvent:'\u00c9V\u00c9NEMENTS',barWeb:'WEB ET DIGITAL',
       filmsEyebrow:'PRODUCTION S\u00c9LECTIONN\u00c9E',filmsHeading:'De plus pr\u00e8s.',filmsIntro:'Deux vid\u00e9os du portfolio Zoom-X. Vous pouvez regarder les versions compl\u00e8tes avec le son.',
-      filmType:'VID\u00c9O COURTE',claireDescription:'Une courte vid\u00e9o tir\u00e9e des archives de production Zoom-X.',watchFilm:'Voir le film',allFilms:'Voir le portfolio vid\u00e9o',openFilm:'VOIR LE FILM',
+      filmType:'MONTAGE D\u2019ENTRETIEN',editFilmTitle:'Montage d\u2019entretien \u2014 avant/apr\u00e8s',claireDescription:'D\u00e9couvrez l\u2019avant et l\u2019apr\u00e8s du montage et du traitement des couleurs.',watchFilm:'Voir le film',allFilms:'Voir le portfolio vid\u00e9o',openFilm:'VOIR LE FILM',
       fieldEyebrow:'PHOTOGRAPHIE ET PRODUCTION',fieldHeading:'Sur le terrain et en production.',fieldDescription:'Reportages, journ\u00e9es de tournage et moments r\u00e9els tir\u00e9s des archives photo de Zoom-X.',fieldLink:'D\u00e9couvrir les photos',fieldCaption1:'\u00c9quipe de production',fieldCaption2:'Couverture m\u00e9diatique',
       servicesEyebrow:'SERVICES',servicesHeading:'Ce que nous produisons.',servicesIntro:'D\u00e9couvrez nos services. Le p\u00e9rim\u00e8tre, les livrables et le prix final sont confirm\u00e9s par \u00e9crit avant le d\u00e9but du projet.',
       serviceFilm:'Production vid\u00e9o',priceFilm:'D\u00e8s 600 $',servicePhoto:'Photographie',pricePhoto:'D\u00e8s 450 $',serviceSocial:'Contenu social et publicit\u00e9',priceSocial:'D\u00e8s 750 $/mois',serviceWeb:'Cr\u00e9ation de sites web',priceWeb:'D\u00e8s 350 $',serviceApps:'D\u00e9veloppement d\u2019applications',priceApps:'D\u00e8s 3 000 $',servicesViewAll:'Voir tous les forfaits et tarifs',
@@ -356,7 +361,7 @@ body.modal-open{overflow:hidden}
       heroDescription:'Videos comerciales, entrevistas, eventos, fotograf\u00eda de marca, contenido social y sitios web. Producci\u00f3n profesional de principio a fin.',heroWork:'Ver nuestros trabajos',heroContact:'Iniciar un proyecto',heroAside:'VIDEO / FOTO / SERVICIOS DIGITALES',heroScroll:'VER VIDEOS DESTACADOS',
       barVideo:'VIDEO',barPhoto:'FOTOGRAF\u00cdA',barEvent:'COBERTURA DE EVENTOS',barWeb:'WEB Y DIGITAL',
       filmsEyebrow:'PRODUCCI\u00d3N DESTACADA',filmsHeading:'Una mirada de cerca.',filmsIntro:'Dos piezas del portafolio de Zoom-X. Mira las versiones completas con sonido.',
-      filmType:'VIDEO CORTO',claireDescription:'Un video corto del archivo de producci\u00f3n de Zoom-X.',watchFilm:'Ver video',allFilms:'Ver portafolio de videos',openFilm:'VER VIDEO',
+      filmType:'EDICI\u00d3N DE ENTREVISTA',editFilmTitle:'Edici\u00f3n de entrevista: antes y despu\u00e9s',claireDescription:'Una comparaci\u00f3n del antes y despu\u00e9s de la edici\u00f3n y del color.',watchFilm:'Ver video',allFilms:'Ver portafolio de videos',openFilm:'VER VIDEO',
       fieldEyebrow:'FOTOGRAF\u00cdA Y PRODUCCI\u00d3N',fieldHeading:'En el set y en terreno.',fieldDescription:'Reportajes, d\u00edas de producci\u00f3n y momentos reales del archivo fotogr\u00e1fico de Zoom-X.',fieldLink:'Explorar fotograf\u00edas',fieldCaption1:'Equipo de producci\u00f3n',fieldCaption2:'Cobertura de eventos',
       servicesEyebrow:'SERVICIOS',servicesHeading:'Lo que producimos.',servicesIntro:'Explora los servicios. Confirmamos por escrito el alcance, los entregables y el costo final antes de comenzar.',
       serviceFilm:'Producci\u00f3n de video',priceFilm:'Desde $600',servicePhoto:'Fotograf\u00eda',pricePhoto:'Desde $450',serviceSocial:'Contenido social y publicidad',priceSocial:'Desde $750/mes',serviceWeb:'Desarrollo web',priceWeb:'Desde $350',serviceApps:'Desarrollo de aplicaciones',priceApps:'Desde $3,000',servicesViewAll:'Ver todos los paquetes y precios',
@@ -397,60 +402,41 @@ body.modal-open{overflow:hidden}
   applyLanguage(storedLanguage);
   const year=document.querySelector('#year');if(year)year.textContent=String(new Date().getFullYear());
 
-  const heroVideo=document.querySelector('#hero-video');
+  // Direct, native HTML5 playback: films stay in the frames where they appear.
   const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const saveData=navigator.connection?.saveData===true;
-  let visibleHero=true;
-  let dialogOpen=false;
-  const playAmbient=()=>{
-    if(!heroVideo||reducedMotion||saveData||dialogOpen||!visibleHero)return;
-    heroVideo.muted=true;
-    const attempt=heroVideo.play();if(attempt&&typeof attempt.catch==='function')attempt.catch(()=>{});
+  const players={
+    claire:document.querySelector('#hero-video'),
+    zoom:document.querySelector('#edit-video')
   };
-  if(heroVideo){
-    if(reducedMotion||saveData){heroVideo.removeAttribute('autoplay');heroVideo.pause()}
-    else{
-      heroVideo.addEventListener('loadedmetadata',playAmbient,{once:true});
-      playAmbient();
-      if('IntersectionObserver'in window){
-        const observer=new IntersectionObserver(entries=>{visibleHero=entries[0]?.isIntersecting??false;if(visibleHero)playAmbient();else heroVideo.pause()},{threshold:.08});
-        observer.observe(heroVideo);
-      }
+  const startFilmHere=(key)=>{
+    const video=players[key];
+    if(!video)return;
+    Object.entries(players).forEach(([otherKey,otherVideo])=>{
+      if(otherKey!==key)otherVideo?.pause();
+    });
+    // playsinline keeps Safari on iPhone inside this exact video frame.
+    video.setAttribute('playsinline','');
+    video.setAttribute('webkit-playsinline','');
+    video.playsInline=true;
+    video.controls=true;
+    video.muted=false;
+    video.loop=false;
+    video.preload='auto';
+    const frame=video.closest('.hero-media,.feature-film-image');
+    frame?.classList.add('is-playing');
+    frame?.querySelectorAll('[data-play-film]').forEach(button=>{button.hidden=true});
+    if(key==='zoom' && frame){
+      const box=frame.getBoundingClientRect();
+      if(box.bottom<80||box.top>window.innerHeight-80)frame.scrollIntoView({behavior:reducedMotion?'auto':'smooth',block:'center'});
     }
-  }
-  const filmMap={
-    zoom:{name:'Zoom and Ang',source:'assets/video-portfolio/Zoom-and-Ang-web.mp4',poster:'assets/video-portfolio/Zoom-and-Ang-poster.webp'},
-    claire:{name:'Claire Compas BTS',source:'assets/video-portfolio/Claire-Compas-BTS-web.mp4',poster:'assets/video-portfolio/Claire-Compas-BTS-poster.webp'}
+    const play=video.play();
+    if(play&&typeof play.catch==='function')play.catch(()=>{}); // Native controls remain usable if playback is blocked.
   };
-  const dialog=document.querySelector('#film-dialog');
-  const dialogPlayer=document.querySelector('#dialog-player');
-  const dialogTitle=document.querySelector('#dialog-title');
-  const dialogClose=document.querySelector('#dialog-close');
-  let originControl=null;
-  const stopFilm=()=>{
-    if(!dialog)return;
-    dialogPlayer?.pause();
-    if(dialogPlayer){dialogPlayer.removeAttribute('src');dialogPlayer.load()}
-    if(dialog.open)dialog.close();
-    document.body.classList.remove('modal-open');dialogOpen=false;
-    originControl?.focus({preventScroll:true});originControl=null;
-    playAmbient();
-  };
-  document.querySelectorAll('[data-play-film]').forEach(control=>control.addEventListener('click',()=>{
-    const film=filmMap[control.dataset.playFilm];if(!film||!dialog||!dialogPlayer)return;
-    originControl=control;dialogOpen=true;heroVideo?.pause();
-    dialogTitle.textContent=film.name;
-    dialogPlayer.setAttribute('poster',film.poster);
-    dialogPlayer.src=film.source;
-    document.body.classList.add('modal-open');
-    if(typeof dialog.showModal==='function')dialog.showModal();else dialog.setAttribute('open','');
-    const p=dialogPlayer.play();if(p&&typeof p.catch==='function')p.catch(()=>{});
-    dialogClose?.focus({preventScroll:true});
-  }));
-  dialogClose?.addEventListener('click',stopFilm);
-  dialog?.addEventListener('cancel',event=>{event.preventDefault();stopFilm()});
-  dialog?.addEventListener('click',event=>{if(event.target===dialog)stopFilm()});
-  document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!dialog?.open)closeNav()});
+  document.querySelectorAll('[data-play-film]').forEach(button=>button.addEventListener('click',()=>startFilmHere(button.dataset.playFilm)));
+  document.addEventListener('visibilitychange',()=>{
+    if(document.hidden)Object.values(players).forEach(video=>video?.pause());
+  });
+  document.addEventListener('keydown',event=>{if(event.key==='Escape')closeNav()});
   if('IntersectionObserver'in window&&!reducedMotion){
     document.documentElement.classList.add('has-motion');
     const observer=new IntersectionObserver(entries=>{
