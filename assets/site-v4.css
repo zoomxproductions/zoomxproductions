@@ -500,3 +500,85 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
   .z5-hero-copy h1{font-size:36px!important}
   .z5-price-list{grid-template-columns:1fr!important}
 }
+
+
+/* Zoom-X v6 restrained studio homepage */
+.z6-home{background:#f8f7f3}
+.z6-topbar{background:#f8f7f3;border-bottom:1px solid #d9d5cc;backdrop-filter:none}
+.z6-topbar .nav{height:78px}
+.z6-topbar .brand img{width:96px}
+.z6-topbar .navlinks{gap:28px;font-size:11px;letter-spacing:.05em;text-transform:none}
+.z6-topbar .quote-link{text-transform:none;letter-spacing:0;font-size:11px;padding:9px 12px}
+.z6-topbar .menu-btn{font-size:12px;letter-spacing:.02em}
+
+.z6-hero{padding:54px 0 62px;border-bottom:1px solid #d9d5cc}
+.z6-hero-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(460px,1.1fr);gap:56px;align-items:center}
+.z6-copy{max-width:690px}
+.z6-kicker{margin:0 0 15px;font-size:9px;line-height:1.4;letter-spacing:.12em;font-weight:600;color:#706b64}
+.z6-copy h1{margin:0;font-size:clamp(42px,5.1vw,70px);line-height:1.01;letter-spacing:-.048em;font-weight:560;text-transform:none;max-width:12ch}
+.z6-lede{margin:24px 0 28px;max-width:580px;font-size:16px;line-height:1.62;color:#514d47}
+.z6-actions{display:flex;gap:10px;flex-wrap:wrap}
+.z6-btn{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:11px 15px;border:1px solid #171717;font-size:11px;font-weight:600;letter-spacing:0}
+.z6-btn.dark{background:#171717;color:#fff}
+.z6-btn.light{background:transparent;color:#171717}
+.z6-hero-photo{margin:0}
+.z6-hero-photo img{width:100%;height:auto;aspect-ratio:16/11;object-fit:cover;object-position:center 40%;background:#e2dfd8}
+.z6-hero-photo figcaption{display:flex;justify-content:space-between;gap:16px;margin-top:8px;font-size:9px;line-height:1.35;color:#69645d}
+
+.z6-services{padding:66px 0 70px;border-bottom:1px solid #d9d5cc}
+.z6-section-head{display:grid;grid-template-columns:1fr minmax(260px,.45fr);gap:60px;align-items:end;margin-bottom:28px}
+.z6-section-head>div h2{font-size:clamp(31px,3.4vw,46px);line-height:1.06;letter-spacing:-.04em;font-weight:560;margin:0}
+.z6-section-head>p{margin:0;color:#605b55;font-size:13px;line-height:1.6;max-width:420px}
+.z6-service-table{border-top:1px solid #aaa59d}
+.z6-service-table>a{display:grid;grid-template-columns:minmax(0,1fr) 140px 70px;gap:24px;align-items:center;padding:18px 0;border-bottom:1px solid #d9d5cc}
+.z6-service-table>a:hover strong{text-decoration:underline;text-underline-offset:4px}
+.z6-service-table div{min-width:0}
+.z6-service-table strong{display:block;font-size:18px;line-height:1.2;letter-spacing:-.02em;font-weight:600}
+.z6-service-table span{display:block;margin-top:4px;font-size:12px;line-height:1.45;color:#6b655e}
+.z6-service-table b{font-size:12px;font-weight:600;text-align:right;white-space:nowrap}
+.z6-service-table em{font-size:10px;font-style:normal;text-align:right;color:#706b64}
+.z6-text-link{display:inline-block;margin-top:18px;font-size:11px;border-bottom:1px solid #171717;padding-bottom:3px}
+
+.z6-work{padding:66px 0 72px;background:#1a1a18;color:#f4f2ec}
+.z6-work .z6-kicker,.z6-work .z6-section-head>p{color:#aaa69f}
+.z6-gallery{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+.z6-gallery a{color:#f4f2ec}
+.z6-gallery img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;filter:none}
+.z6-gallery span{display:block;margin-top:7px;font-size:9px;letter-spacing:.04em;color:#c6c2ba}
+
+.z6-contact{padding:66px 0 72px}
+.z6-contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:start}
+.z6-contact h2{font-size:clamp(34px,4vw,54px);line-height:1;letter-spacing:-.045em;font-weight:560;margin:0}
+.z6-contact-grid>div:last-child>p{font-size:14px;line-height:1.65;color:#58534d;max-width:540px;margin:0 0 22px}
+.z6-contact small{display:block;margin-top:18px;max-width:560px;font-size:10px;line-height:1.5;color:#7b756d}
+
+@media(max-width:980px){
+  .z6-hero-grid{grid-template-columns:1fr 1fr;gap:34px}
+}
+@media(max-width:700px){
+  .z6-topbar .nav{height:66px!important}
+  .z6-topbar .brand img{width:78px!important}
+  .z6-topbar .menu-btn{font-size:10px!important;padding:6px!important}
+  .z6-topbar .lang button{font-size:9px!important;padding:7px 8px!important}
+  .z6-hero{padding:30px 0 42px}
+  .z6-hero-grid{grid-template-columns:1fr;gap:26px}
+  .z6-copy h1{font-size:38px;line-height:1.02;max-width:11ch;letter-spacing:-.045em}
+  .z6-lede{font-size:14px;line-height:1.55;margin:18px 0 22px}
+  .z6-btn{min-height:40px;padding:10px 13px;font-size:10px}
+  .z6-hero-photo img{aspect-ratio:4/3}
+  .z6-hero-photo figcaption{font-size:8px}
+  .z6-services,.z6-work,.z6-contact{padding:46px 0 50px}
+  .z6-section-head{grid-template-columns:1fr;gap:12px;margin-bottom:22px}
+  .z6-section-head>div h2{font-size:30px}
+  .z6-section-head>p{font-size:12px}
+  .z6-service-table>a{grid-template-columns:1fr auto;gap:9px 14px;padding:16px 0}
+  .z6-service-table strong{font-size:17px}
+  .z6-service-table span{font-size:11px}
+  .z6-service-table b{font-size:11px;grid-column:2;grid-row:1;text-align:right}
+  .z6-service-table em{grid-column:2;grid-row:2;text-align:right;font-size:9px}
+  .z6-gallery{grid-template-columns:1fr;gap:22px}
+  .z6-gallery span{font-size:8px}
+  .z6-contact-grid{grid-template-columns:1fr;gap:20px}
+  .z6-contact h2{font-size:34px}
+  .z6-contact-grid>div:last-child>p{font-size:13px}
+}
