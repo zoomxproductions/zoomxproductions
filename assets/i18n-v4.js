@@ -157,8 +157,8 @@ window.ZOOMX_I18N.en=Object.assign(window.ZOOMX_I18N.en,{
 "contact.copy":"Share the service or package, date, location, timeline and deliverables. We will confirm the scope and payment amount in writing.",
 "film.cTitle":"Published packages start at $450 for commercial photography and $600 for a short promotional video.",
 "film.cCopy":"Wedding video starts at $1,800, wedding photography at $2,500, corporate event coverage at $900 and music videos at $3,000. Additional locations, hours, crew, permits, travel, equipment and specialized production may change the final quote.",
-"digital.cTitle":"Website packages start at $1,500.",
-"digital.cCopy":"The published Website Essentials package covers up to five pages. Mobile apps and more complex digital products are quoted separately because the package guide does not set a standard app price.",
+"digital.cTitle":"Websites from $350. Applications from $3,000.",
+"digital.cCopy":"Both are starting prices; final project scope and total cost are confirmed in writing.",
 "marketing.cTitle":"Social media starts at $750/month. Paid social management starts at $300/month plus ad spend.",
 "marketing.cCopy":"Marketing, advertising and consulting packages have published starting prices. Final cost depends on platforms, content volume, campaign length, media spend and production requirements."
 });
@@ -169,8 +169,8 @@ window.ZOOMX_I18N.fr=Object.assign(window.ZOOMX_I18N.fr,{
 "contact.copy":"Indiquez le service ou forfait, la date, le lieu, le délai et les livrables. Nous confirmerons le périmètre et le montant par écrit.",
 "film.cTitle":"Les forfaits publiés commencent à 450 $ pour une séance photo commerciale et 600 $ pour une courte vidéo promotionnelle.",
 "film.cCopy":"La vidéo de mariage commence à 1 800 $, la photographie de mariage à 2 500 $, la couverture d'événement d'entreprise à 900 $ et les clips musicaux à 3 000 $. Les lieux, heures, équipes, permis, déplacements ou équipements supplémentaires peuvent modifier le devis final.",
-"digital.cTitle":"Les forfaits de site web commencent à 1 500 $.",
-"digital.cCopy":"Le forfait Website Essentials couvre jusqu'à cinq pages. Les applications mobiles et produits digitaux complexes font l'objet d'un devis séparé.",
+"digital.cTitle":"Sites web dès 350 $. Applications dès 3 000 $.",
+"digital.cCopy":"Ces prix sont indicatifs. Le périmètre et le coût total sont confirmés par écrit.",
 "marketing.cTitle":"La gestion des réseaux sociaux commence à 750 $/mois. La gestion des publicités sociales commence à 300 $/mois plus budget média.",
 "marketing.cCopy":"Les forfaits marketing, publicité et conseil ont des prix de départ publiés. Le coût final dépend des plateformes, du volume, de la durée, du budget média et des besoins de production."
 });
@@ -181,8 +181,8 @@ window.ZOOMX_I18N.es=Object.assign(window.ZOOMX_I18N.es,{
 "contact.copy":"Comparte el servicio o paquete, fecha, ubicación, calendario y entregables. Confirmaremos el alcance y el monto por escrito.",
 "film.cTitle":"Los paquetes publicados comienzan en $450 para fotografía comercial y $600 para un video promocional corto.",
 "film.cCopy":"Video de boda desde $1,800, fotografía de boda desde $2,500, cobertura de evento corporativo desde $900 y videos musicales desde $3,000. Ubicaciones, horas, personal, permisos, viajes o equipo adicionales pueden cambiar la cotización final.",
-"digital.cTitle":"Los sitios web comienzan en $1,500.",
-"digital.cCopy":"Website Essentials cubre hasta cinco páginas. Apps móviles y productos digitales más complejos se cotizan por separado.",
+"digital.cTitle":"Sitios web desde $350. Aplicaciones desde $3,000.",
+"digital.cCopy":"Son precios iniciales. El alcance y el costo total se confirman por escrito.",
 "marketing.cTitle":"Gestión de redes desde $750/mes. Gestión de publicidad social desde $300/mes más inversión publicitaria.",
 "marketing.cCopy":"Marketing, publicidad y consultoría tienen precios iniciales publicados. El costo final depende de plataformas, volumen, duración, inversión publicitaria y necesidades de producción."
 });
