@@ -398,3 +398,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
  .z5-package .z5-package-price{font-size:18px}
  .z5-booking{padding:50px 0}
 }
+
+.z5-contact-payment{margin-top:30px;padding-top:18px;border-top:1px solid var(--line)}
+.z5-contact-payment>span{display:block;font-size:9px;letter-spacing:.13em;color:#77716a;margin-bottom:8px}
+.z5-contact-payment>strong{display:block;font-size:17px}
+.z5-contact-payment>small{display:block;margin-top:3px;font-size:13px;color:#5f5a53}
+.z5-contact-payment>p{font-size:11px!important;line-height:1.55!important;color:#77716a!important;margin:14px 0 0!important}
