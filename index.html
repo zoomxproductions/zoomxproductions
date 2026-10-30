@@ -76,7 +76,7 @@
   <section class="price-banner" aria-labelledby="price-title"><div class="container"><div class="price-head"><div><p class="section-label">04 / STARTING RATES</p><h2 class="section-title" id="price-title" data-lang-key="prices.title">Know where to start.</h2></div><p data-lang-key="prices.desc">Published prices are a starting point. Each booking is confirmed with the final scope, deliverables and dates in writing.</p></div><div class="price-items"><a href="pricing.html#photo"><span>COMMERCIAL PHOTOGRAPHY</span><strong>$450</strong></a><a href="pricing.html#promo"><span>SHORT PROMO VIDEO</span><strong>$600</strong></a><a href="pricing.html#web"><span>WEBSITE ESSENTIALS</span><strong>$1,500+</strong></a></div></div></section>
   <section class="bottom-cta" aria-labelledby="cta-title"><div class="container bottom-grid"><div><p class="section-label">WORK WITH ZOOM-X</p><h2 id="cta-title" data-lang-key="cta.title">Ready to talk about your project?</h2></div><div class="bottom-right"><p data-lang-key="cta.desc">Tell us what you need, when you need it and where it will happen. We'll confirm the scope and amount before any payment is made.</p><div class="hero-buttons"><a class="action-primary" href="contact.html">Start a project</a><a class="action-secondary" href="pricing.html">See the packages</a></div></div></div></section>
 </main>
-<footer class="site-footer"><div class="container footer-grid"><div><small>ZOOM-X PRODUCTIONS / ORLANDO, FLORIDA<br>&copy; <span id="year">2026</span> ZOOM-X PRODUCTIONS</small></div><div class="footer-links"><a href="work.html">Work</a><a href="services.html">Services</a><a href="pricing.html">Pricing</a><a href="contact.html">Contact</a><a href="booking-terms.html">Payment policy</a></div></div></footer>
+<footer class="site-footer"><div class="container footer-grid"><div><small>ZOOM-X PRODUCTIONS / ORLANDO, FLORIDA<br>&copy; <span id="year">2026</span> ZOOM-X PRODUCTIONS</small></div><div class="footer-links"><a href="work.html">Work</a><a href="services.html">Services</a><a href="pricing.html">Pricing</a><a href="gallery.html">Photos</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="booking-terms.html">Payment policy</a></div></div></footer>
 <script>
 (()=>{
 const menu=document.querySelector('.mobile-menu'),nav=document.querySelector('.head-nav');
@@ -92,7 +92,7 @@ const original=Object.fromEntries([...document.querySelectorAll('[data-lang-key]
 document.querySelectorAll('[data-language]').forEach(b=>b.addEventListener('click',()=>setLanguage(b.dataset.language)));
 try{setLanguage(localStorage.getItem('zoomx-lang')||'en')}catch(e){setLanguage('en')}
 const y=document.querySelector('#year');if(y)y.textContent=String(new Date().getFullYear());
-if(location.protocol==='file:'){document.querySelectorAll('[data-preview]').forEach(el=>{el.src='team-preview.jpg'}) ;const logo=document.querySelector('.brand img');if(logo)logo.src='logo-preview.jpg'}
+
 })();
 </script>
 </body>
