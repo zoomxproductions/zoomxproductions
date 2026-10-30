@@ -418,3 +418,85 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .z5-policy-list h3{font-size:24px;letter-spacing:-.03em;line-height:1.15;margin:0 0 9px}
 .z5-policy-list p{font-size:13px;line-height:1.65;color:#625d56;margin:0;max-width:760px}
 @media(max-width:800px){.z5-policy-grid{grid-template-columns:1fr;gap:40px}.z5-policy-grid aside{position:static}}
+
+
+/* Zoom-X v5.1 mobile repair — cache-safe, restrained, iPhone-first */
+@media(max-width:700px){
+  html,body{overflow-x:hidden}
+  .shell{padding-inline:20px}
+  .topbar{background:#faf9f6;backdrop-filter:none}
+  .nav{height:68px!important;grid-template-columns:1fr auto!important;gap:10px!important;padding-block:0!important}
+  .brand img{width:80px!important}
+  .navright{gap:7px!important}
+  .lang{height:36px}
+  .lang button{padding:7px 9px!important;font-size:10px!important;color:#171717!important;-webkit-appearance:none;appearance:none}
+  .lang button.active{color:#fff!important}
+  .menu-btn{display:block!important;color:#171717!important;font-size:22px!important;line-height:1!important;padding:5px!important;-webkit-appearance:none;appearance:none}
+  .quote-link{display:none!important}
+
+  .z5-hero-grid{grid-template-columns:1fr!important;gap:26px!important;padding-top:30px!important;padding-bottom:26px!important}
+  .z5-kicker{font-size:8px!important;letter-spacing:.13em!important;line-height:1.35!important;margin-bottom:12px!important}
+  .z5-hero-copy h1{font-size:40px!important;line-height:1.01!important;letter-spacing:-.052em!important;max-width:11.5ch!important}
+  .z5-lede{font-size:15px!important;line-height:1.52!important;margin:20px 0 24px!important;max-width:36ch}
+  .z5-actions{display:flex!important;gap:12px!important;align-items:center!important;flex-wrap:wrap!important}
+  .z5-primary{display:inline-flex!important;min-height:44px!important;padding:12px 15px!important;background:#171717!important;color:#fff!important;font-size:11px!important;letter-spacing:.02em!important}
+  .z5-secondary{display:inline-flex!important;min-height:44px!important;align-items:center!important;border-bottom:1px solid #171717!important;padding:10px 0 7px!important;font-size:11px!important;color:#171717!important}
+
+  .z5-hero-media{margin:0!important}
+  .z5-hero-media img{width:100%!important;height:auto!important;min-height:0!important;max-height:none!important;aspect-ratio:4/3!important;object-fit:cover!important;object-position:center 38%!important}
+  .z5-hero-media figcaption{display:flex!important;justify-content:space-between!important;align-items:center!important;gap:12px!important;margin-top:8px!important;font-size:8px!important;line-height:1.3!important;letter-spacing:.08em!important}
+  .z5-hero-media figcaption a{white-space:nowrap!important}
+
+  .z5-price-ribbon{padding-top:24px!important;padding-bottom:26px!important}
+  .z5-price-ribbon>p{font-size:8px!important;margin-bottom:10px!important}
+  .z5-price-list{display:grid!important;grid-template-columns:1fr 1fr!important;border-top:1px solid var(--line)!important;border-left:1px solid var(--line)!important}
+  .z5-price-list a{display:flex!important;min-width:0!important;min-height:76px!important;padding:11px 12px!important;border-right:1px solid var(--line)!important;border-bottom:1px solid var(--line)!important}
+  .z5-price-list span{font-size:8px!important;line-height:1.3!important}
+  .z5-price-list strong{font-size:18px!important;line-height:1!important;margin-top:10px!important}
+
+  .z5-section,.z5-process{padding:50px 0!important}
+  .z5-section-head,.z5-work-head{display:grid!important;grid-template-columns:1fr!important;gap:12px!important;margin-bottom:24px!important}
+  .z5-section-head .z5-kicker,.z5-work-head>div:first-child,.z5-work-head>p{grid-column:1!important}
+  .z5-section-head h2{font-size:34px!important;line-height:1!important}
+  .z5-section-head>p:last-child{font-size:13px!important;line-height:1.55!important;justify-self:start!important}
+
+  .z5-service-row{grid-template-columns:24px minmax(0,1fr) 18px!important;gap:10px!important;padding:18px 0!important}
+  .z5-service-row h3{font-size:20px!important;margin-bottom:5px!important}
+  .z5-service-row p{font-size:11px!important;line-height:1.45!important}
+  .z5-service-row>strong{grid-column:2!important;text-align:left!important;font-size:11px!important}
+  .z5-service-row .z5-arrow{grid-column:3!important;grid-row:1/3!important;font-size:16px!important}
+
+  .z5-work{padding:50px 0 55px!important}
+  .z5-media-grid{display:grid!important;grid-template-columns:1fr!important;gap:22px!important}
+  .z5-media-grid a:last-child{grid-column:auto!important}
+  .z5-media-grid img{height:auto!important;aspect-ratio:4/3!important;object-fit:cover!important}
+  .z5-media-grid span{font-size:8px!important;padding-top:7px!important}
+
+  .z5-steps{grid-template-columns:1fr!important;border-left:0!important}
+  .z5-steps>div{min-height:0!important;padding:17px 0!important;border-right:0!important}
+  .z5-steps span{margin-bottom:18px!important}
+  .z5-steps h3{font-size:17px!important}
+  .z5-steps p{font-size:11px!important}
+
+  .z5-payment{padding:48px 0!important}
+  .z5-payment-grid{grid-template-columns:1fr!important;gap:26px!important}
+  .z5-payment h2{font-size:46px!important}
+  .z5-zelle>div{grid-template-columns:90px 1fr!important;gap:14px!important}
+  .z5-zelle strong{font-size:19px!important}
+
+  .v4-contact-strip{padding:25px 0!important}
+  .v4-contact-inner{flex-direction:column!important;align-items:flex-start!important;gap:16px!important}
+  .v4-contact-inner h2{font-size:26px!important}
+  .v4-contact-inner p{font-size:12px!important}
+
+  .footer{padding:24px 0 30px!important}
+  .footer-grid{grid-template-columns:1fr!important;gap:18px!important}
+  .footer-links{gap:13px 16px!important;font-size:9px!important}
+}
+@media(max-width:380px){
+  .shell{padding-inline:17px}
+  .brand img{width:74px!important}
+  .lang button{padding-inline:7px!important}
+  .z5-hero-copy h1{font-size:36px!important}
+  .z5-price-list{grid-template-columns:1fr!important}
+}
