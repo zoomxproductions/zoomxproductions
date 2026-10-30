@@ -2,102 +2,130 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#f5f3ee">
-<meta name="description" content="Zoom-X Productions offers video production, photography, event coverage, social content, websites and advertising services in Orlando, Florida.">
-<title>Zoom-X Productions | Video, Photography & Digital</title>
-<link rel="stylesheet" href="assets/studio-v7.css?v=20261030-9">
-<link rel="stylesheet" href="assets/films.css?v=20261030-1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#151514">
+<meta name="description" content="Zoom-X Productions in Orlando — films, photography, event coverage and digital work. Watch selected productions and explore services and pricing.">
+<title>Zoom-X Productions | Film, Photography & Digital</title>
+<link rel="preload" href="assets/video-portfolio/Zoom-and-Ang-poster.webp" as="image" type="image/webp">
+<link rel="stylesheet" href="assets/cinema-home.css?v=20261030-cinema1">
+<script src="assets/cinema-home.js?v=20261030-cinema1" defer></script>
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="site-head">
-  <div class="container head-inner">
-    <a class="brand" href="index.html" aria-label="Zoom-X Productions home"><img src="assets/zoomx-logo.png?v=20261030-png" alt="Zoom-X Productions"></a>
-    <nav class="head-nav" id="primary-nav" aria-label="Primary navigation">
-      <a href="work.html" data-lang-key="nav.work">Work</a><a href="videos.html" data-lang-key="nav.films">Films</a><a href="services.html" data-lang-key="nav.services">Services</a><a href="pricing.html" data-lang-key="nav.pricing">Pricing</a><a href="about.html" data-lang-key="nav.about">About</a><a href="contact.html" data-lang-key="nav.contact">Contact</a>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" id="site-header">
+  <div class="page-wrap nav-shell">
+    <a class="site-logo" href="index.html" aria-label="Zoom-X Productions — homepage"><img src="assets/zoomx-logo.png?v=20261030-png" alt="Zoom-X Productions" width="150" height="125"></a>
+    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+      <a href="work.html" data-t="navWork">Work</a>
+      <a href="videos.html" data-t="navFilms">Films</a>
+      <a href="services.html" data-t="navServices">Services</a>
+      <a href="pricing.html" data-t="navPricing">Pricing</a>
+      <a href="about.html" data-t="navAbout">About</a>
+      <a href="contact.html" data-t="navContact">Contact</a>
     </nav>
-    <div class="header-right">
-      <div class="header-langs" role="group" aria-label="Select language"><button type="button" data-language="en" class="active">EN</button><button type="button" data-language="fr">FR</button><button type="button" data-language="es">ES</button></div>
-      <a class="header-cta" href="contact.html" data-lang-key="nav.cta">Request a quote</a>
-      <button class="mobile-menu" type="button" aria-controls="primary-nav" aria-expanded="false">MENU</button>
+    <div class="header-actions">
+      <div class="locale-control" aria-label="Website language" role="group">
+        <button type="button" data-locale="en" aria-pressed="true">EN</button>
+        <button type="button" data-locale="fr" aria-pressed="false">FR</button>
+        <button type="button" data-locale="es" aria-pressed="false">ES</button>
+      </div>
+      <a class="header-contact" href="contact.html" data-t="quote">Request a quote</a>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu"><span></span><span></span><span class="menu-text">Menu</span></button>
     </div>
   </div>
 </header>
 <main id="main">
-  <div class="container masthead"><span>ZOOM-X / PRODUCTIONS</span><span>ORLANDO, FLORIDA &nbsp; / &nbsp; VIDEO / PHOTO / DIGITAL</span></div>
-  <section class="hero" aria-labelledby="headline">
-    <div class="container hero-grid">
+  <section class="cinema-hero" id="top" aria-labelledby="hero-title">
+    <div class="hero-grain" aria-hidden="true"></div>
+    <div class="page-wrap hero-layout">
       <div class="hero-copy">
-        <div>
-          <div class="hero-category" data-lang-key="hero.label">VIDEO &nbsp; / &nbsp; PHOTO &nbsp; / &nbsp; DIGITAL</div>
-          <h1 id="headline" data-lang-key="hero.title">Video, photography <em>&amp;</em> digital production.</h1>
-          <p class="hero-intro" data-lang-key="hero.desc">We produce content for brands, cover events, photograph people and build websites. From the first shoot to the finished campaign.</p>
-          <div class="hero-buttons"><a class="action-primary" href="work.html" data-lang-key="hero.work">View our work</a><a class="action-secondary" href="pricing.html" data-lang-key="hero.price">Services &amp; pricing</a></div>
+        <div class="hero-topline"><span class="eyebrow eyebrow-light" data-t="heroKicker">ZOOM-X / ORLANDO, FLORIDA</span><span class="hero-topline-rule" aria-hidden="true"></span></div>
+        <div class="hero-statement">
+          <p class="hero-suptitle" data-t="heroCategory">VIDEO PRODUCTION · PHOTOGRAPHY · DIGITAL</p>
+          <h1 id="hero-title"><span data-t="heroLine1">Film.</span><span data-t="heroLine2">Photo.</span><em data-t="heroLine3">Motion.</em></h1>
+          <p class="hero-description" data-t="heroDesc">Commercial videos, interviews, events, photography and digital projects. Produced by Zoom-X.</p>
+          <div class="hero-actions">
+            <button class="text-button light-button" type="button" data-film="zoom" data-t="watchMain">Watch the film <span aria-hidden="true">↗</span></button>
+            <a class="text-button subtle-button" href="work.html" data-t="allWork">Explore our work <span aria-hidden="true">↗</span></a>
+          </div>
         </div>
-        <div class="hero-credit"><span>ORLANDO / FL</span><span>PRODUCTION &amp; CREATIVE SERVICES</span></div>
+        <div class="hero-footnote"><span data-t="heroFootnote">ZOOM-X PRODUCTIONS — SELECTED VIDEO WORK</span><a href="#selected" data-t="scroll">SCROLL TO DISCOVER <span aria-hidden="true">↓</span></a></div>
       </div>
-      <figure class="hero-media">
-        <img src="assets/gallery/zoomx-production-team.webp" data-preview="team" width="1350" height="1013" fetchpriority="high" alt="Two members of the Zoom-X team wearing branded shirts, one holding a camera">
-        <figcaption class="hero-image-label"><strong>THE PEOPLE BEHIND THE WORK</strong><span>ZOOM-X PRODUCTIONS / STUDIO</span></figcaption>
-      </figure>
-    </div>
-  </section>
-  <div class="container below-hero"><strong>WHAT WE DO</strong><p>Campaign videos &nbsp; / &nbsp; Photography &nbsp; / &nbsp; Events &nbsp; / &nbsp; Websites &nbsp; / &nbsp; Social media</p><a href="services.html">All services</a></div>
-  <section class="section collection" aria-labelledby="field-title">
-    <div class="container">
-      <div class="section-head"><div><p class="section-label">01 / IN THE FIELD</p><h2 id="field-title" class="section-title" data-lang-key="field.title">On location with Zoom-X.</h2></div><p data-lang-key="field.desc">A look at the people, interviews and events behind our media work. Photographs from the Zoom-X archive.</p></div>
-      <div class="editorial-grid">
-        <a class="editorial-card" href="gallery.html"><figure><img src="assets/gallery/press-conference.webp" alt="Reporter holding a microphone at a conference" loading="lazy" data-preview="secondary"><figcaption><span>01 / REPORTING<small>Media coverage</small></span><span>ARCHIVE</span></figcaption></figure></a>
-        <a class="editorial-card" href="gallery.html"><figure><img src="assets/gallery/podcast-interview.webp" alt="Interview setup with studio microphones" loading="lazy" data-preview="secondary"><figcaption><span>02 / INTERVIEWS<small>Studio conversation</small></span><span>ARCHIVE</span></figcaption></figure></a>
-        <a class="editorial-card" href="gallery.html"><figure><img src="assets/gallery/event-coverage.webp" alt="Zoom-X event photographer on location" loading="lazy" data-preview="secondary"><figcaption><span>03 / EVENTS<small>Field coverage</small></span><span>ARCHIVE</span></figcaption></figure></a>
-      </div><div class="editorial-footer"><a href="gallery.html">View the photo journal</a></div>
-    </div>
-  </section>
-  <section class="zxfilm-feature" aria-labelledby="home-films-heading"><div class="container"><div class="zxfilm-feature-heading"><div><p class="section-label" data-lang-key="films.home.kicker">FROM THE STUDIO</p><h2 id="home-films-heading" data-lang-key="films.home.heading">Film &amp; video.</h2></div><p data-lang-key="films.home.copy">Two short productions from Zoom-X. Select a video to watch with sound.</p></div><div class="zxfilm-feature-grid"><article><div class="zxfilm-feature-visual"><video controls playsinline preload="none" poster="assets/video-portfolio/Zoom-and-Ang-poster.webp" width="720" height="1280"><source src="assets/video-portfolio/Zoom-and-Ang-web.mp4" type="video/mp4"><a href="videos.html">Watch on the film page</a></video></div><div class="zxfilm-feature-caption"><strong>Zoom and Ang</strong><span>00:21</span></div></article><article><div class="zxfilm-feature-visual"><video controls playsinline preload="none" poster="assets/video-portfolio/Claire-Compas-BTS-poster.webp" width="720" height="1280"><source src="assets/video-portfolio/Claire-Compas-BTS-web.mp4" type="video/mp4"><a href="videos.html">Watch on the film page</a></video></div><div class="zxfilm-feature-caption"><strong>Claire Compas BTS</strong><span>00:23</span></div></article></div><a class="zxfilm-feature-all" href="videos.html" data-lang-key="films.home.more">View film portfolio</a></div></section>
-<section class="section services" aria-labelledby="services-title">
-    <div class="container">
-      <div class="service-intro"><div><p class="section-label">02 / OUR SERVICES</p><h2 id="services-title" class="section-title" data-lang-key="services.title">The work we offer.</h2></div><p data-lang-key="services.desc">Photography, video and media production are at the heart of Zoom-X. We also offer websites, social content and advertising services to support the finished work.</p></div>
-      <div class="service-list">
-        <a href="service-video-photo.html" class="service-row"><span class="num">01</span><div><h3 data-lang-key="service.video">Video production</h3><p data-lang-key="service.videoDesc">Promo films, interviews, weddings, music videos and event highlights.</p></div><strong class="price">From $600</strong><span class="arrow">&rarr;</span></a>
-        <a href="service-video-photo.html" class="service-row"><span class="num">02</span><div><h3 data-lang-key="service.photo">Photography</h3><p data-lang-key="service.photoDesc">Commercial, portrait, wedding and event photography.</p></div><strong class="price">From $450</strong><span class="arrow">&rarr;</span></a>
-        <a href="service-marketing.html" class="service-row"><span class="num">03</span><div><h3 data-lang-key="service.social">Social media &amp; campaigns</h3><p data-lang-key="service.socialDesc">Content planning, reels, publishing, paid social and advertising.</p></div><strong class="price">From $750/mo</strong><span class="arrow">&rarr;</span></a>
-        <a href="service-digital.html" class="service-row"><span class="num">04</span><div><h3 data-lang-key="service.web">Website design</h3><p data-lang-key="service.webDesc">Business websites, portfolios and digital launches.</p></div><strong class="price" data-lang-key="price.web">From $350</strong><span class="arrow">&rarr;</span></a>
-        <a href="service-digital.html" class="service-row"><span class="num">05</span><div><h3 data-lang-key="service.app">Application development</h3><p data-lang-key="service.appDesc">Custom web and mobile applications.</p></div><strong class="price" data-lang-key="price.app">From $3,000</strong><span class="arrow">&rarr;</span></a>
-        <a href="service-journalism.html" class="service-row"><span class="num">06</span><div><h3 data-lang-key="service.media">Media &amp; journalism</h3><p data-lang-key="service.mediaDesc">Interviews, reporting, editorial work and field coverage.</p></div><strong class="price" data-lang-key="service.quote">By quote</strong><span class="arrow">&rarr;</span></a>
+      <div class="hero-film-set" aria-label="Selected Zoom-X films">
+        <div class="hero-tall-reel">
+          <video id="ambient-reel" class="hero-video" width="720" height="1280" poster="assets/video-portfolio/Zoom-and-Ang-poster.webp" muted playsinline loop preload="none" aria-label="Silent visual excerpt from Zoom and Ang" data-src="assets/video-portfolio/Zoom-and-Ang-web.mp4"></video>
+          <div class="hero-reel-tag"><span>01 / <strong>ZOOM AND ANG</strong></span><span>00:21</span></div>
+          <button type="button" class="round-play" data-film="zoom" aria-label="Play Zoom and Ang with sound"><span aria-hidden="true">▶</span></button>
+        </div>
+        <button class="hero-side-reel" type="button" data-film="claire" aria-label="Play Claire Compas BTS with sound">
+          <img src="assets/video-portfolio/Claire-Compas-BTS-poster.webp" alt="Still from Claire Compas behind the scenes" width="720" height="1280" loading="eager">
+          <span class="side-caption"><small>02 / BEHIND THE SCENES</small><strong>CLAIRE COMPAS BTS</strong><span>WATCH <span aria-hidden="true">↗</span></span></span>
+        </button>
+        <span class="set-vertical-label" aria-hidden="true">ZOOM-X / MOVING IMAGE ARCHIVE</span>
       </div>
-      <div class="service-action"><a href="pricing.html" data-lang-key="services.price">Complete service &amp; package guide</a></div>
     </div>
+    <div class="hero-bottom-line" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
   </section>
-  <div class="note"><div class="container"><p data-lang-key="note.copy">Need more than one service? Send us a short brief and we will quote the combined scope before booking.</p><a href="contact.html">Request a quote &rarr;</a></div></div>
-  <section class="section references" aria-labelledby="reference-title">
-    <div class="container references-grid">
-      <div class="reference-visual" aria-label="Koneksyon public digital platform"><span class="issue">DIGITAL REFERENCE / WEB &amp; MOBILE</span><h3>Koneksyon.</h3><p>LIVE ON IOS / ANDROID / WEB</p></div>
-      <div class="reference-copy"><p class="section-label">03 / DIGITAL REFERENCE</p><h2 id="reference-title" class="section-title" data-lang-key="reference.title">Made for the web, too.</h2><p data-lang-key="reference.desc">Zoom-X also works on websites, online stores and applications. Explore Koneksyon's web and mobile platform and Olleni, a hair and beauty e-commerce project. Project-specific contributions are available on request.</p><div class="reference-links"><a href="https://koneksyondatingapp.com" target="_blank" rel="noopener noreferrer" data-lang-key="reference.konLink">Koneksyon website</a><a href="https://olleniusa.com" target="_blank" rel="noopener noreferrer" data-lang-key="reference.olleniLink">Olleni online store</a><a href="work.html" data-lang-key="reference.allLink">All work</a></div></div>
-    </div>
-  </section>
-  <section class="price-banner" aria-labelledby="price-title"><div class="container"><div class="price-head"><div><p class="section-label">04 / STARTING RATES</p><h2 class="section-title" id="price-title" data-lang-key="prices.title">Know where to start.</h2></div><p data-lang-key="prices.desc">Published prices are a starting point. Each booking is confirmed with the final scope, deliverables and dates in writing.</p></div><div class="price-items"><a href="pricing.html#photo"><span>COMMERCIAL PHOTOGRAPHY</span><strong>$450</strong></a><a href="pricing.html#promo"><span>SHORT PROMO VIDEO</span><strong>$600</strong></a><a href="pricing.html#web"><span data-lang-key="prices.websiteLabel">WEBSITE DESIGN</span><strong>$350+</strong></a><a href="pricing.html#apps"><span data-lang-key="prices.appLabel">APPLICATION DEVELOPMENT</span><strong>$3,000+</strong></a></div></div></section>
-  <section class="bottom-cta" aria-labelledby="cta-title"><div class="container bottom-grid"><div><p class="section-label">WORK WITH ZOOM-X</p><h2 id="cta-title" data-lang-key="cta.title">Ready to talk about your project?</h2></div><div class="bottom-right"><p data-lang-key="cta.desc">Tell us what you need, when you need it and where it will happen. We'll confirm the scope and amount before any payment is made.</p><div class="hero-buttons"><a class="action-primary" href="contact.html">Start a project</a><a class="action-secondary" href="pricing.html">See the packages</a></div></div></div></section>
-</main>
-<footer class="site-footer"><div class="container footer-grid"><div><small>ZOOM-X PRODUCTIONS / ORLANDO, FLORIDA<br>&copy; <span id="year">2026</span> ZOOM-X PRODUCTIONS</small></div><div class="footer-links"><a href="work.html">Work</a><a href="videos.html">Films</a><a href="services.html">Services</a><a href="pricing.html">Pricing</a><a href="gallery.html">Photos</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="booking-terms.html">Payment policy</a></div></div></footer>
-<script>
-(()=>{
-const menu=document.querySelector('.mobile-menu'),nav=document.querySelector('.head-nav');
-menu?.addEventListener('click',()=>{const open=!nav.classList.contains('open');nav.classList.toggle('open',open);menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'CLOSE':'MENU'});
-document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav?.classList.contains('open')){nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='MENU'}});
-const i18n={
- en:{},
- fr:{'nav.work':'Projets','nav.services':'Services','nav.pricing':'Tarifs','nav.about':'A propos','nav.contact':'Contact','nav.cta':'Demander un devis','hero.label':'VIDEO / PHOTO / DIGITAL','hero.title':'Production video, photographie et creation digitale.','hero.desc':'Nous produisons des contenus pour les marques, couvrons les evenements, realisons des photographies et creons des sites web. Du premier tournage a la campagne finale.','hero.work':'Voir les projets','hero.price':'Services et tarifs','field.title':'Zoom-X sur le terrain.','field.desc':'Reportages, entretiens et evenements issus des archives photographiques de Zoom-X.','services.title':'Nos prestations.','services.desc':'La video, la photographie et la production media sont au coeur de Zoom-X. Nous proposons aussi des sites web, contenus sociaux et campagnes publicitaires.','service.video':'Production video','service.videoDesc':'Videos promotionnelles, interviews, mariages, clips et evenements.','service.photo':'Photographie','service.photoDesc':'Photographie commerciale, portraits, mariages et evenements.','service.social':'Reseaux sociaux et campagnes','service.socialDesc':'Planification, reels, publications et publicite digitale.','service.web':'Creation de sites web','service.webDesc':'Sites pour entreprises, portfolios et lancements digitaux.','service.app':'Développement d’applications','service.appDesc':'Applications web et mobiles sur mesure.','price.web':'À partir de 350 $','price.app':'À partir de 3 000 $','prices.websiteLabel':'CRÉATION DE SITES WEB','prices.appLabel':'DÉVELOPPEMENT D’APPLICATIONS','service.media':'Journalisme et medias','service.mediaDesc':'Interviews, reportages et couverture sur le terrain.','service.quote':'Sur devis','services.price':'Guide complet des services et tarifs','note.copy':'Besoin de plusieurs services ? Envoyez un resume pour obtenir un devis avant reservation.','reference.title':'Nous creons aussi pour le web.','reference.desc':'Zoom-X realise aussi des sites web, boutiques en ligne et applications. Decouvrez Koneksyon, plateforme web et mobile, et Olleni, boutique en ligne de produits capillaires et de beaute. Contributions detaillees sur demande.','reference.konLink':'Site web Koneksyon','reference.olleniLink':'Boutique en ligne Olleni','reference.allLink':'Tous les projets','prices.title':'Des tarifs pour commencer.','prices.desc':'Les tarifs publies sont indicatifs. Le perimetre, les livrables et la date sont confirmes par ecrit.','cta.title':'Parlons de votre projet.','cta.desc':'Expliquez votre besoin, la date et le lieu. Nous confirmerons le prix avant tout paiement.'},
- es:{'nav.work':'Trabajos','nav.services':'Servicios','nav.pricing':'Precios','nav.about':'Nosotros','nav.contact':'Contacto','nav.cta':'Pedir presupuesto','hero.label':'VIDEO / FOTO / DIGITAL','hero.title':'Produccion de video, fotografia y trabajo digital.','hero.desc':'Producimos contenido para marcas, cubrimos eventos, fotografiamos personas y creamos sitios web. Desde el primer rodaje hasta la campana terminada.','hero.work':'Ver trabajos','hero.price':'Servicios y precios','field.title':'Zoom-X en el terreno.','field.desc':'Personas, entrevistas y eventos del archivo fotografico de Zoom-X.','services.title':'Nuestros servicios.','services.desc':'Video, fotografia y produccion de medios son la base de Zoom-X. Tambien ofrecemos sitios web, contenido social y publicidad.','service.video':'Produccion de video','service.videoDesc':'Videos promocionales, entrevistas, bodas, musica y eventos.','service.photo':'Fotografia','service.photoDesc':'Fotos comerciales, retratos, bodas y eventos.','service.social':'Redes sociales y campanas','service.socialDesc':'Planificacion, reels, publicacion y anuncios digitales.','service.web':'Diseno de sitios web','service.webDesc':'Sitios de negocios, portafolios y lanzamientos digitales.','service.app':'Desarrollo de aplicaciones','service.appDesc':'Aplicaciones web y móviles a medida.','price.web':'Desde $350','price.app':'Desde $3,000','prices.websiteLabel':'DISEÑO DE SITIOS WEB','prices.appLabel':'DESARROLLO DE APLICACIONES','service.media':'Periodismo y medios','service.mediaDesc':'Entrevistas, reportajes y cobertura editorial.','service.quote':'Por cotizacion','services.price':'Guia completa de servicios y precios','note.copy':'Necesitas varios servicios? Envia un resumen para recibir una cotizacion antes de reservar.','reference.title':'Tambien creamos para la web.','reference.desc':'Zoom-X tambien crea sitios web, tiendas en linea y aplicaciones. Explora Koneksyon, una plataforma web y movil, y Olleni, una tienda en linea de belleza y cuidado capilar. Detalles del trabajo disponibles a pedido.','reference.konLink':'Sitio web Koneksyon','reference.olleniLink':'Tienda en linea Olleni','reference.allLink':'Todos los proyectos','prices.title':'Precios para comenzar.','prices.desc':'Los precios publicados son iniciales. El alcance, los entregables y las fechas se confirman por escrito.','cta.title':'Hablemos de tu proyecto.','cta.desc':'Dinos que necesitas, cuando y donde. Confirmaremos el precio antes del pago.'}
-};
-i18n.fr['nav.films']='Films';i18n.es['nav.films']='Videos';Object.assign(i18n.fr,{'films.home.kicker':'DU STUDIO','films.home.heading':'Film et vidéo.','films.home.copy':'Deux productions courtes de Zoom-X. Sélectionnez une vidéo pour la regarder avec le son.','films.home.more':'Voir le portfolio vidéo'});Object.assign(i18n.es,{'films.home.kicker':'DESDE EL ESTUDIO','films.home.heading':'Cine y video.','films.home.copy':'Dos producciones cortas de Zoom-X. Toca un video para verlo con sonido.','films.home.more':'Ver portafolio de videos'});
-function setLanguage(lang){if(!i18n[lang])lang='en';document.documentElement.lang=lang;document.querySelectorAll('[data-language]').forEach(b=>b.classList.toggle('active',b.dataset.language===lang));document.querySelectorAll('[data-lang-key]').forEach(el=>{const val=i18n[lang][el.dataset.langKey];if(val)el.textContent=val});try{localStorage.setItem('zoomx-lang',lang)}catch(e){}}
-const original=Object.fromEntries([...document.querySelectorAll('[data-lang-key]')].map(el=>[el.dataset.langKey,el.textContent]));i18n.en=original;
-document.querySelectorAll('[data-language]').forEach(b=>b.addEventListener('click',()=>setLanguage(b.dataset.language)));
-try{setLanguage(localStorage.getItem('zoomx-lang')||'en')}catch(e){setLanguage('en')}
-const y=document.querySelector('#year');if(y)y.textContent=String(new Date().getFullYear());
 
-})();
-</script>
+  <section class="selected-section" id="selected" aria-labelledby="selected-title">
+    <div class="page-wrap selected-intro reveal-on-view">
+      <div class="section-serial"><span>01 / 04</span><span data-t="sectionFilmsLabel">FILMS & VIDEO</span></div>
+      <div class="selected-heading"><h2 id="selected-title" data-t="selectedTitle">Selected moving images.</h2><p data-t="selectedDesc">Two short pieces from our production archive. Open either film to watch with sound.</p></div>
+    </div>
+    <div class="page-wrap film-gallery">
+      <button class="film-poster-film film-poster-main reveal-on-view" type="button" data-film="zoom" aria-label="Watch Zoom and Ang">
+        <img src="assets/video-portfolio/Zoom-and-Ang-poster.webp" alt="Portrait from Zoom and Ang" width="720" height="1280" loading="lazy">
+        <span class="film-poster-inner"><span class="film-poster-play" aria-hidden="true">▶</span><span data-t="playWithSound">WATCH WITH SOUND</span></span>
+      </button>
+      <div class="film-gallery-editorial reveal-on-view"><span class="gallery-line"></span><h3>Zoom and Ang</h3><p data-t="filmZoomType">Short-form film</p><span class="film-time">00:21 / 01</span><span class="film-gallery-caption" data-t="filmGalleryCaption">From the camera to the final edit.</span></div>
+      <button class="film-poster-film film-poster-secondary reveal-on-view" type="button" data-film="claire" aria-label="Watch Claire Compas BTS">
+        <img src="assets/video-portfolio/Claire-Compas-BTS-poster.webp" alt="Interview and behind-the-scenes coverage with a microphone" width="720" height="1280" loading="lazy">
+        <span class="film-poster-inner"><span class="film-poster-play" aria-hidden="true">▶</span><span data-t="playWithSound">WATCH WITH SOUND</span></span>
+      </button>
+      <div class="film-gallery-editorial film-gallery-editorial-second reveal-on-view"><span class="gallery-line"></span><h3>Claire Compas BTS</h3><p data-t="filmClaireType">Behind the scenes</p><span class="film-time">00:23 / 02</span><a href="videos.html" data-t="completeFilms">See the complete film collection <span aria-hidden="true">↗</span></a></div>
+    </div>
+  </section>
+
+  <section class="field-section" id="field" aria-labelledby="field-title">
+    <div class="page-wrap field-layout">
+      <div class="field-copy reveal-on-view"><div class="section-serial"><span>02 / 04</span><span data-t="sectionFieldLabel">ON LOCATION</span></div><h2 id="field-title" data-t="fieldTitle">Beyond the screen.</h2><p data-t="fieldDesc">Reporting, interviews and production days from the Zoom-X photo archive. Real moments, on set and in the field.</p><a class="text-button field-link" href="gallery.html" data-t="viewPhotos">See the photo journal <span aria-hidden="true">↗</span></a></div>
+      <div class="field-photos">
+        <a class="field-photo-a reveal-on-view" href="gallery.html"><img src="assets/gallery/press-conference.webp" width="853" height="853" loading="lazy" alt="Press reporting and interview coverage"><span>01 / <span data-t="photoPress">REPORTING</span></span></a>
+        <a class="field-photo-b reveal-on-view" href="gallery.html"><img src="assets/gallery/zoomx-production-team.webp" width="900" height="900" loading="lazy" alt="Zoom-X production team with a camera"><span>02 / <span data-t="photoTeam">PRODUCTION</span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="services-section" id="what-we-do" aria-labelledby="services-title">
+    <div class="page-wrap"><div class="services-title-line reveal-on-view"><div class="section-serial"><span>03 / 04</span><span data-t="sectionServicesLabel">WHAT WE DO</span></div><div class="services-title-copy"><h2 id="services-title" data-t="servicesTitle">Production & services.</h2><p data-t="servicesDesc">Tell us what you need. We quote the exact scope before production or development begins.</p></div></div>
+      <div class="service-rows">
+        <a href="service-video-photo.html" class="service-line reveal-on-view"><span class="service-n">01</span><div><h3 data-t="serviceFilm">Video production</h3><p data-t="serviceFilmDesc">Promo films, interviews, events and music videos</p></div><strong data-t="serviceFilmPrice">From $600</strong><span class="service-arr">↗</span></a>
+        <a href="service-video-photo.html" class="service-line reveal-on-view"><span class="service-n">02</span><div><h3 data-t="servicePhoto">Photography</h3><p data-t="servicePhotoDesc">Commercial, portrait and event photography</p></div><strong data-t="servicePhotoPrice">From $450</strong><span class="service-arr">↗</span></a>
+        <a href="service-marketing.html" class="service-line reveal-on-view"><span class="service-n">03</span><div><h3 data-t="serviceSocial">Social media & campaigns</h3><p data-t="serviceSocialDesc">Content, publishing and advertising</p></div><strong data-t="serviceSocialPrice">From $750/mo</strong><span class="service-arr">↗</span></a>
+        <a href="service-digital.html" class="service-line reveal-on-view"><span class="service-n">04</span><div><h3 data-t="serviceWeb">Websites</h3><p data-t="serviceWebDesc">Business websites and online portfolios</p></div><strong data-t="serviceWebPrice">From $350</strong><span class="service-arr">↗</span></a>
+        <a href="service-digital.html" class="service-line reveal-on-view"><span class="service-n">05</span><div><h3 data-t="serviceApp">Application development</h3><p data-t="serviceAppDesc">Web and mobile applications</p></div><strong data-t="serviceAppPrice">From $3,000</strong><span class="service-arr">↗</span></a>
+      </div><a class="service-see-all" href="pricing.html" data-t="servicesSeePricing">Full service and pricing guide <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+
+  <section class="digital-section" id="digital" aria-labelledby="digital-title">
+    <div class="page-wrap digital-layout">
+      <div class="digital-copy reveal-on-view"><div class="section-serial"><span>04 / 04</span><span data-t="sectionDigitalLabel">DIGITAL WORK</span></div><h2 id="digital-title" data-t="digitalTitle">Work beyond production.</h2><p data-t="digitalDesc">Live websites, e-commerce and mobile experiences from our digital portfolio.</p></div>
+      <div class="digital-projects">
+        <a href="https://koneksyondatingapp.com" target="_blank" rel="noopener noreferrer" class="digital-project reveal-on-view"><span class="digital-project-index">01 / APPLICATION & WEB</span><strong>Koneksyon</strong><span data-t="digitalKoneksyon">Social platform · Website and mobile</span><i aria-hidden="true">↗</i></a>
+        <a href="https://olleniusa.com" target="_blank" rel="noopener noreferrer" class="digital-project reveal-on-view"><span class="digital-project-index">02 / E-COMMERCE</span><strong>Olleni</strong><span data-t="digitalOlleni">Hair and beauty online store</span><i aria-hidden="true">↗</i></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing-section" id="rates" aria-labelledby="rates-title">
+    <div class="page-wrap"><div class="price-intro reveal-on-view"><span class="eyebrow" data-t="priceKicker">STARTING RATES / USD</span><h2 id="rates-title" data-t="priceTitle">A starting point.</h2><p data-t="priceDesc">Final packages and production costs are confirmed in a written quote.</p></div><div class="price-band"><a href="pricing.html#photo"><span data-t="ratePhoto">Commercial photo</span><strong>$450</strong></a><a href="pricing.html#promo"><span data-t="ratePromo">Promo video</span><strong>$600</strong></a><a href="pricing.html#web"><span data-t="rateWeb">Website</span><strong>$350+</strong></a><a href="pricing.html#apps"><span data-t="rateApp">Application</span><strong>$3,000+</strong></a></div></div>
+  </section>
+
+  <section class="contact-section" id="inquiry" aria-labelledby="contact-title"><div class="page-wrap contact-layout"><div><span class="eyebrow eyebrow-light" data-t="contactKicker">WORK WITH ZOOM-X</span><h2 id="contact-title" data-t="contactTitle">Have a project in mind?</h2></div><div class="contact-right"><p data-t="contactDesc">Tell us the kind of work, your location and when you need it. We will confirm the details before payment.</p><a class="contact-cta" href="contact.html" data-t="contactButton">Start a project <span aria-hidden="true">↗</span></a><span class="contact-meta" data-t="contactMeta">ORLANDO, FLORIDA / AVAILABLE FOR PROJECT INQUIRIES</span></div></div></section>
+</main>
+<footer class="site-footer"><div class="page-wrap footer-row"><div><a href="index.html" class="footer-brand">ZOOM-X PRODUCTIONS</a><small>© <span id="year">2026</span> ZOOM-X PRODUCTIONS</small></div><nav aria-label="Footer navigation"><a href="videos.html" data-t="navFilms">Films</a><a href="work.html" data-t="navWork">Work</a><a href="services.html" data-t="navServices">Services</a><a href="pricing.html" data-t="navPricing">Pricing</a><a href="booking-terms.html" data-t="footerPolicy">Payment policy</a></nav></div></footer>
+<div class="scroll-progress" aria-hidden="true"><span id="scroll-progress"></span></div>
+<dialog class="film-dialog" id="film-dialog" aria-label="Zoom-X video viewer"><div class="dialog-content"><div class="dialog-topbar"><span id="dialog-heading">ZOOM-X / FILM</span><button type="button" id="dialog-close" class="dialog-close" aria-label="Close video">CLOSE ×</button></div><video id="dialog-player" controls playsinline preload="none" width="720" height="1280"></video><p class="dialog-footer" data-t="modalFooter">Watch with sound · Tap pause to stop playback</p></div></dialog>
 </body>
 </html>
