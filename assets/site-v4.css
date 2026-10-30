@@ -404,3 +404,17 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .z5-contact-payment>strong{display:block;font-size:17px}
 .z5-contact-payment>small{display:block;margin-top:3px;font-size:13px;color:#5f5a53}
 .z5-contact-payment>p{font-size:11px!important;line-height:1.55!important;color:#77716a!important;margin:14px 0 0!important}
+
+.z5-policy{padding:68px 0 80px}
+.z5-policy-grid{display:grid;grid-template-columns:330px minmax(0,1fr);gap:80px;align-items:start}
+.z5-policy-grid aside{position:sticky;top:115px}
+.z5-policy-grid aside h2{font-size:42px;line-height:1;letter-spacing:-.05em;margin:0 0 24px}
+.z5-policy-zelle{border-top:1px solid var(--line);padding-top:14px;display:grid;grid-template-columns:92px 1fr;gap:10px 16px;align-items:baseline}
+.z5-policy-zelle span{font-size:9px;letter-spacing:.12em;color:#77716a;text-transform:uppercase}
+.z5-policy-zelle strong{font-size:18px}
+.z5-policy-list{border-top:1px solid #aaa59c}
+.z5-policy-list article{display:grid;grid-template-columns:42px 1fr;gap:22px;padding:24px 0;border-bottom:1px solid var(--line)}
+.z5-policy-list article>span{font-size:10px;font-weight:700;color:#9a771f}
+.z5-policy-list h3{font-size:24px;letter-spacing:-.03em;line-height:1.15;margin:0 0 9px}
+.z5-policy-list p{font-size:13px;line-height:1.65;color:#625d56;margin:0;max-width:760px}
+@media(max-width:800px){.z5-policy-grid{grid-template-columns:1fr;gap:40px}.z5-policy-grid aside{position:static}}
