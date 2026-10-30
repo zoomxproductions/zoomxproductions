@@ -186,3 +186,9 @@ window.ZOOMX_I18N.es=Object.assign(window.ZOOMX_I18N.es,{
 "marketing.cTitle":"Gestión de redes desde $750/mes. Gestión de publicidad social desde $300/mes más inversión publicitaria.",
 "marketing.cCopy":"Marketing, publicidad y consultoría tienen precios iniciales publicados. El costo final depende de plataformas, volumen, duración, inversión publicitaria y necesidades de producción."
 });
+
+
+// Zoom-X v5 final navigation and direct hero copy.
+window.ZOOMX_I18N.en=Object.assign(window.ZOOMX_I18N.en,{"z5.home.title":"Video. Photography. Social media. Websites. Advertising.","nav.terms":"Payment policy"});
+window.ZOOMX_I18N.fr=Object.assign(window.ZOOMX_I18N.fr,{"z5.home.title":"Vidéo. Photographie. Réseaux sociaux. Sites web. Publicité.","nav.terms":"Politique de paiement"});
+window.ZOOMX_I18N.es=Object.assign(window.ZOOMX_I18N.es,{"z5.home.title":"Video. Fotografía. Redes sociales. Sitios web. Publicidad.","nav.terms":"Política de pago"});
