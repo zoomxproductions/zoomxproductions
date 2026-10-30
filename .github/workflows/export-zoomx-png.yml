@@ -1,0 +1,65 @@
+name: Create PNG copy of Zoom-X logo
+on:
+  push:
+    paths:
+      - .github/workflows/export-zoomx-png.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  export-logo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Convert embedded logo to transparent PNG
+        run: |
+          python3 -m pip install --quiet pillow
+          python3 - <<'PY'
+          from pathlib import Path
+          from io import BytesIO
+          import base64
+          import re
+          from PIL import Image
+
+          svg=Path('assets/zoomx-logo.svg').read_text()
+          match=re.search(r'href="data:image/jpeg;base64,([^"]+)"',svg)
+          if not match:
+              raise RuntimeError('Embedded original Zoom-X logo not found')
+          original=Image.open(BytesIO(base64.b64decode(match.group(1)))).convert('RGBA')
+          # Preserve the logo exactly; remove only its white JPEG background.
+          src=original.load()
+          for y in range(original.height):
+              for x in range(original.width):
+                  r,g,b,_=src[x,y]
+                  lo=min(r,g,b)
+                  hi=max(r,g,b)
+                  if lo>240 and hi-lo<14:
+                      a=max(0,min(255,int((255-lo)*16)))
+                      if a:
+                          opacity=a/255
+                          r=int(max(0,min(255,(r-255*(1-opacity))/opacity)))
+                          g=int(max(0,min(255,(g-255*(1-opacity))/opacity)))
+                          b=int(max(0,min(255,(b-255*(1-opacity))/opacity)))
+                      src[x,y]=(r,g,b,a)
+          alpha=original.getchannel('A')
+          bbox=alpha.point(lambda p: 255 if p>160 else 0).getbbox()
+          if bbox:
+              border=6
+              bbox=(max(0,bbox[0]-border),max(0,bbox[1]-border),
+                    min(original.width,bbox[2]+border),min(original.height,bbox[3]+border))
+              original=original.crop(bbox)
+          target=Path('assets/zoomx-logo.png')
+          original.save(target,optimize=True)
+          print('Saved',target,'size',original.size)
+          PY
+      - name: Commit PNG to website
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/zoomx-logo.png
+          if ! git diff --cached --quiet; then
+            git commit -m "Add original Zoom-X logo as transparent PNG"
+            git push
+          fi
