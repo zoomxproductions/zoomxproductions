@@ -56,3 +56,17 @@ document.addEventListener('DOMContentLoaded',()=>{
     }
   });
 });
+
+
+// Keep the payment policy reachable from every page footer.
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('.footer-links').forEach(footer=>{
+    if(!footer.querySelector('a[href="booking-terms.html"]')){
+      const link=document.createElement('a');
+      link.href='booking-terms.html';
+      link.dataset.i18n='nav.terms';
+      link.textContent='Payment policy';
+      footer.appendChild(link);
+    }
+  });
+});
