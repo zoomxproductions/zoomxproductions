@@ -309,3 +309,68 @@ window.ZOOMX_I18N.es=Object.assign(window.ZOOMX_I18N.es,{
 "z6.contact.pricing":"Ver precios",
 "z6.contact.payment":"Los pagos se realizan por Zelle después de confirmar la cotización. Consulta la política de pago para las condiciones de reserva."
 });
+
+/* Zoom-X pricing update: websites from $350, applications from $3,000 */
+window.ZOOMX_I18N.en = Object.assign(window.ZOOMX_I18N.en, {
+  "digital.cTitle": "Websites from $350. Applications from $3,000.",
+  "digital.cCopy": "Both are starting prices. We confirm the pages, features, integrations, timeline and total project cost in writing before payment.",
+  "digital.price.web": "WEBSITE DEVELOPMENT",
+  "digital.price.app": "APPLICATION DEVELOPMENT",
+  "v4.service.digitalPrices": "Websites from $350 · Applications from $3,000",
+  "pricing.nav.app": "Applications",
+  "pricing.web.title": "Website design + development.",
+  "pricing.web.starter": "Starter Website",
+  "pricing.web.startTerm": "Starting price · Scope confirmed by quote",
+  "pricing.web.startDesc": "Entry-level website projects. The pages, design, content, functionality, revisions and any hosting costs are confirmed in a written quote before payment.",
+  "pricing.web.essentials": "Business Website — Essentials",
+  "pricing.web.essTerm": "Up to 5 pages",
+  "pricing.web.essDesc": "Responsive design, desktop/mobile optimization, navigation, contact form, social links, image formatting, client-provided content placement, a basic SEO checklist, one revision round and launch assistance.",
+  "pricing.web.note": "Starting prices are in USD. Hosting, domain registration, third-party subscriptions and any extra features are included only if specified in the approved quote.",
+  "pricing.app.title": "Application development.",
+  "pricing.app.starter": "Application Development",
+  "pricing.app.startTerm": "Starting price · Custom scope",
+  "pricing.app.startDesc": "Web or mobile applications. Platforms, screens, features, account systems, integrations, testing and launch support are determined in the project proposal.",
+  "pricing.app.note": "The final development quote depends on the approved requirements. App store fees, external services and recurring infrastructure costs are separate unless explicitly included."
+});
+window.ZOOMX_I18N.fr = Object.assign(window.ZOOMX_I18N.fr, {
+  "digital.cTitle": "Sites web dès 350 $. Applications dès 3 000 $.",
+  "digital.cCopy": "Il s’agit de tarifs de départ. Les pages, fonctionnalités, intégrations, délais et coûts définitifs sont confirmés par écrit avant tout paiement.",
+  "digital.price.web": "CRÉATION DE SITES WEB",
+  "digital.price.app": "DÉVELOPPEMENT D’APPLICATIONS",
+  "v4.service.digitalPrices": "Sites web dès 350 $ · Applications dès 3 000 $",
+  "pricing.nav.app": "Applications",
+  "pricing.web.title": "Création et développement de sites web.",
+  "pricing.web.starter": "Site web — Formule de départ",
+  "pricing.web.startTerm": "Prix de départ · Périmètre confirmé par devis",
+  "pricing.web.startDesc": "Pour des projets de sites web simples. Le nombre de pages, la conception, le contenu, les fonctionnalités, les révisions et les éventuels frais d’hébergement sont confirmés par écrit avant paiement.",
+  "pricing.web.essentials": "Site professionnel — Essentials",
+  "pricing.web.essTerm": "Jusqu’à 5 pages",
+  "pricing.web.essDesc": "Design adaptatif, optimisation ordinateur et mobile, navigation, formulaire de contact, liens sociaux, préparation des images, intégration du contenu fourni, bases du référencement, une série de révisions et assistance au lancement.",
+  "pricing.web.note": "Les prix de départ sont en USD. Hébergement, nom de domaine, abonnements externes et fonctions supplémentaires sont inclus uniquement s’ils figurent dans le devis approuvé.",
+  "pricing.app.title": "Développement d’applications.",
+  "pricing.app.starter": "Développement d’application",
+  "pricing.app.startTerm": "Prix de départ · Projet sur mesure",
+  "pricing.app.startDesc": "Applications web ou mobiles. Les plateformes, écrans, fonctionnalités, comptes, intégrations, tests et l’accompagnement au lancement sont précisés dans la proposition.",
+  "pricing.app.note": "Le prix final dépend des besoins approuvés. Les frais des stores, services externes et infrastructures récurrentes sont distincts sauf indication contraire dans le devis."
+});
+window.ZOOMX_I18N.es = Object.assign(window.ZOOMX_I18N.es, {
+  "digital.cTitle": "Sitios web desde $350. Aplicaciones desde $3,000.",
+  "digital.cCopy": "Son precios iniciales. Confirmamos por escrito las páginas, funciones, integraciones, plazos y el costo total antes de cualquier pago.",
+  "digital.price.web": "DESARROLLO DE SITIOS WEB",
+  "digital.price.app": "DESARROLLO DE APLICACIONES",
+  "v4.service.digitalPrices": "Sitios web desde $350 · Aplicaciones desde $3,000",
+  "pricing.nav.app": "Aplicaciones",
+  "pricing.web.title": "Diseño y desarrollo de sitios web.",
+  "pricing.web.starter": "Sitio web inicial",
+  "pricing.web.startTerm": "Precio inicial · Alcance confirmado por cotización",
+  "pricing.web.startDesc": "Para proyectos web sencillos. Las páginas, diseño, contenido, funciones, revisiones y posibles gastos de alojamiento se confirman por escrito antes del pago.",
+  "pricing.web.essentials": "Sitio web de negocios — Essentials",
+  "pricing.web.essTerm": "Hasta 5 páginas",
+  "pricing.web.essDesc": "Diseño adaptable, optimización para computadora y móvil, navegación, formulario de contacto, enlaces sociales, preparación de imágenes, contenido proporcionado por el cliente, SEO básico, una ronda de revisiones y asistencia de lanzamiento.",
+  "pricing.web.note": "Los precios iniciales están en USD. Alojamiento, dominio, suscripciones externas y funciones adicionales solo se incluyen cuando aparecen en la cotización aprobada.",
+  "pricing.app.title": "Desarrollo de aplicaciones.",
+  "pricing.app.starter": "Desarrollo de aplicaciones",
+  "pricing.app.startTerm": "Precio inicial · Alcance personalizado",
+  "pricing.app.startDesc": "Aplicaciones web o móviles. Las plataformas, pantallas, funciones, cuentas, integraciones, pruebas y apoyo al lanzamiento se definen en la propuesta.",
+  "pricing.app.note": "La cotización final depende de los requisitos aprobados. Los costos de tiendas de apps, servicios externos e infraestructura recurrente son adicionales salvo que se incluyan expresamente."
+});
