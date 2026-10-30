@@ -1,0 +1,57 @@
+name: Publish Zoom-X optimized videos
+on:
+  push:
+    branches: [main]
+    paths:
+      - "assets/video-staging/**"
+  workflow_dispatch:
+permissions:
+  contents: write
+
+jobs:
+  publish-videos:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out website
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Verify and publish uploaded media
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import base64, hashlib
+
+          expected = {
+              "production-behind-scenes": "457fdc18ae215535e0c7ebb0e200beae3af23151a7c42cf3f57c88ffb92058bd",
+              "health-awareness-education": "4300052dadd75beb52533160cb3ce9bbc2a1fea0eb1def4e55697664f935493f",
+              "healthcare-interview": "9d8f816c20740a15490b271fb1c5fd5719dae72e91ddac6c0640f5d68e152c91",
+          }
+          staging = Path("assets/video-staging")
+          published = Path("assets/video-portfolio")
+          published.mkdir(parents=True, exist_ok=True)
+          for name, digest in expected.items():
+              pieces = sorted(staging.glob(name + ".part*.txt"))
+              if not pieces:
+                  continue
+              encoded = b"".join(p.read_bytes() for p in pieces)
+              decoded = base64.b64decode(encoded, validate=True)
+              actual = hashlib.sha256(decoded).hexdigest()
+              if actual != digest:
+                  raise RuntimeError(f"Failed SHA-256 verification for {name}: {actual}")
+              target = published / (name + ".mp4")
+              target.write_bytes(decoded)
+              print(f"Verified {target} ({len(decoded)} bytes, {len(pieces)} pieces)")
+          PY
+      - name: Commit verified MP4 files and clean up transfer pieces
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/video-portfolio/
+          if [ -d assets/video-staging ]; then
+            git rm -r -f assets/video-staging
+          fi
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish five optimized Zoom-X web portfolio videos"
+            git push
+          fi
